@@ -109,16 +109,34 @@ ul {
       margin: 2%;
 
 }
-/* 
-p {
-   color: #c5c4c4;
-   font-size: 55px;
-   margin: 0;
-} */
-/* strong {
-   color: #000;
-   font-weight: bold;
-} */
+
+
+.section-why-chose {
+   color: #fff;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   /* line-height: 30px; */
+   background-color: var(--primary-color);
+}
+.all-contents-box {
+   margin: 5%;
+}
+.trust-content-wrap {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   margin: 3em;
+   gap: 20px;
+}
+.section-why-chose h5 {
+   margin: 10px auto;
+}
+.section-why-chose p {
+   font-size: 13px;
+   line-height: normal;
+}
+
 
 
 

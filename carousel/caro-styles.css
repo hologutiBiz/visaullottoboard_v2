@@ -1,0 +1,96 @@
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.lotto-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  background: rgba(0,0,0,0.6);
+  padding: 1rem;
+  max-width: 90%;
+  border-radius: 5px;
+}
+
+.carousel-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #2282c7;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Navigation Arrows */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* background: rgba(16, 185, 129, 0.8); */
+  background-color: #2282c7;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.green-lotto-slide {
+  background-image: url("image.png");
+}
+.green-lotto-slide .carousel-btn {
+  background-color: rgba(16, 185, 129, 1);
+}
+.caro-green-lotto-span {
+  color: rgba(16, 185, 129, 1);
+}
+.bg-img {
+  height: 300px;
+  background-image: url("image");
+  background-position: center;
+}
+
+.nav-btn:hover {
+  background: rgba(16, 185, 129, 1);
+}
+
+.nav-btn.left {
+  left: 10px;
+}
+
+.nav-btn.right {
+  right: 10px;
+}
+.carousel-overlay {
+  position: absolute; background-color: #0000009a; width: 100%; height: 100%;
+}

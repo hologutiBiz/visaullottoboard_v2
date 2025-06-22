@@ -74,7 +74,7 @@ ul {
 .section-features {
    position: relative;
    padding-bottom: 20px;
-   margin: 3rem 5%;
+   margin: 3rem 5% 0;
    background-color: #000000b4;
 }
 
@@ -120,6 +120,50 @@ ul {
    text-align: justify;
    margin: 4%;
 }
+
+
+/*....section: green lotto ...*/
+.section-green-lotto {
+   color: #f5f5dc;
+   padding: 5rem 0;
+   background-color: #000;
+   font-size: 22px;
+}
+.green-lotto-all-content-box {
+   margin: auto 5%;
+}
+.section-green-lotto h3 {
+   color: rgb(0, 225, 0);
+   text-transform: capitalize;
+   margin-bottom: 20px;
+   font-size: 2rem;
+}
+.section-green-lotto ul {
+   display: list-item;
+   list-style-type: disc;
+   list-style-position: inside;
+}
+::marker {
+   color: rgb(0, 225, 0);
+}
+
+.apply-now-btn {
+   color: #000;
+   text-transform: capitalize;
+   background-color: rgb(0, 225, 0);
+   padding: 10px 15px;
+   margin-top: 30px;
+   width: 300px;
+   border: none;
+   border-radius: 5px;
+   font-size: 20px;
+}
+.apply-now-btn:hover {
+   color: rgb(0, 225, 0);
+   background-color: #fff;
+   transition: 0.4s;
+}
+
 
 /*....section: Why choose us ...*/
 .section-why-chose {
@@ -247,7 +291,6 @@ margin-top: 10px;
    background-color: #000;
 }
 
-
 .board-result {
    display: flex;
    flex-wrap: nowrap;
@@ -343,7 +386,6 @@ time {
 }
 
 
-
 /* footer */
 footer {
    display: flex;
@@ -387,7 +429,7 @@ footer {
    margin: 10px auto;
    text-decoration: none;
    font-size: 12px;
-   transition: 0.4ms;
+   transition: 0.3s;
 
 }
 .right-content-wrap a:hover {

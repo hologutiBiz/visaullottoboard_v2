@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-         <!-- Google Tag Manager -->
-            <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-54JWWN2R');</script> -->
-         <!-- End Google Tag Manager -->
+        
 
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,12 +30,13 @@
       <link rel="manifest" href="site.webmanifest">
     
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">       
       <link rel="stylesheet" href="index.css">
       <link rel="stylesheet" href="/carousel/caro-styles.css">
+      <link rel="stylesheet" href="responsive.css">
     </head>
     <body>
 
@@ -52,6 +47,7 @@
 
       <header>
         <nav>
+          <button class="menu-toggle" onclick="toggleMenu()">☰</button>
           <div class="class">
             <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1749649983/VLB_logo_gpiyzr.png" alt="visual lotto board logo" width="50" height="50">
             <ul>
@@ -172,7 +168,7 @@
           <div>
         </section>
         
-        
+
         <!-- why choose us -->
         <section class="section-why-chose">
           <div class="all-contents-box">
@@ -257,7 +253,8 @@
                   <small><i class="fa-regular fa-circle-check sub-fa-regular"></i> moving numbers </small>
                   <small><i class="fa-regular fa-circle-check sub-fa-regular"></i> Games results </small>
                   <small><i class="fa-regular fa-circle-check sub-fa-regular"></i> Lotto classification chart</small>
-               </div>
+                </div>
+              </div>
               <button class="sub-btn">Subscribe Now</button>
             </article>
           </div>
@@ -324,14 +321,14 @@
                     <td class="winning">43</td>
                     <td class="winning">52</td>
                     <td class="winning">89</td>
-                    <td class="winning" id="lbw">12</td>
+                    <td class="winning" class="lbw">12</td>
     
                     <!-- machine-->
-                    <td class="machine" id="fbm">88</td>
+                    <td class="machine" class="fbm">88</td>
                     <td class="machine">53</td>
                     <td class="machine">44</td>
                     <td class="machine">76</td>
-                    <td class="machine" id="lbm">84</td>
+                    <td class="machine" class="lbm">84</td>
                   </tr>
                 </tbody>
               </table>
@@ -357,14 +354,14 @@
                     <td class="winning">19</td>
                     <td class="winning">67</td>
                     <td class="winning">20</td>
-                    <td class="winning" id="lbw">88</td>
+                    <td class="winning" class="lbw">88</td>
         
                     <!-- machine-->
-                    <td class="machine" id="fbm">13</td>
+                    <td class="machine" class="fbm">13</td>
                     <td class="machine">21</td>
                     <td class="machine">37</td>
                     <td class="machine">32</td>
-                    <td class="machine" id="lbm">06</td>
+                    <td class="machine" class="lbm">06</td>
                   </tr>
                 </tbody>
 
@@ -379,14 +376,14 @@
                     <td class="winning">16</td>
                     <td class="winning">23</td>
                     <td class="winning">85</td>
-                    <td class="winning" id="lbw">3</td>
+                    <td class="winning" class="lbw">3</td>
     
                     <!-- machine-->
-                    <td class="machine" id="fbm">44</td>
+                    <td class="machine" class="fbm">44</td>
                     <td class="machine">46</td>
                     <td class="machine">89</td>
                     <td class="machine">90</td>
-                    <td class="machine" id="lbm">30</td>
+                    <td class="machine" class="lbm">30</td>
                   </tr>
                 </tbody>
               </table>
@@ -412,14 +409,14 @@
                     <td class="winning">72</td>
                     <td class="winning">15</td>
                     <td class="winning">38</td>
-                    <td class="winning" id="lbw">53</td>
+                    <td class="winning" class="lbw">53</td>
     
                     <!-- machine-->
-                    <td class="machine" id="fbm">3</td>
+                    <td class="machine" class="fbm">3</td>
                     <td class="machine">87</td>
                     <td class="machine">2</td>
                     <td class="machine">86</td>
-                    <td class="machine" id="lbm">61</td>
+                    <td class="machine" class="lbm">61</td>
                   </tr>
                 </tbody>
               </table>
@@ -531,15 +528,15 @@
                     <span>facebook</span>
                   </a>
                   <a class="media" href="https://m.me/109930914660224" target="_blank" class="icon">
-                    <i class="fa-brands fa-facebook-messenger"  aria-label="connect on Messenger handle to Chat Us"></i>
+                    <i class="fa-brands fa-facebook-messenger"></i>
                     <span>Messenger</span>
                   </a>
                   <a class="media" href="">
                     <i class="fa-brands fa-instagram"></i>
                     <span>instagram</span>
                   </a>
-                  <a class="media" href="http://www.youtube.com/@VisuaLottoBoard" target="_blank" class="icon">
-                    <i class="fa-brands fa-youtube"  aria-label="connect on our YouTube channel, watch live demo of how to navigate our platform"></i>
+                  <a class="media" href="http://www.youtube.com/@VisuaLottoBoard" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
                     <span>YouTube</span>
                   </a>
                 </div>
@@ -561,6 +558,13 @@
       </footer> 
       
       <script src="/carousel/caro-script.js"></script>
+      <script>
+  function toggleMenu() {
+    const navMenu = document.querySelector('nav ul');
+    navMenu.classList.toggle('show-menu');
+  }
+</script>
+
     </body>
 </html>
         

@@ -320,7 +320,7 @@ testimonial
    left: 0;
    background-color: rgb(228, 247, 253);
    height: 350px;
-   width: 100vw;
+   width: 100%;
    z-index: -1;
 }
 .sub-heading-wrap {
@@ -390,6 +390,9 @@ margin-top: 10px;
    align-items: center;
    margin: 5rem 0;
 }
+.games-result-content-box {
+   margin: 5%;
+}
 .section-games-result h3 {
    text-transform: capitalize;
    margin-bottom: 20px;
@@ -445,21 +448,21 @@ td {
     background-color: whitesmoke;
     font-size: 8px;
 }
-#lbw {
+.lbw {
    border-right: 1px solid red;
 }
-#fbm {
+.fbm {
    border-left: 1px solid red;
 }
 .winning {
    color: blue;
    text-align: center;
-   font-size: 12px;
+   font-size: 10px;
 }
 .machine {
    color: red;
    text-align: center;
-   font-size: 12px;
+   font-size: 10px;
 }
 .day-result  {
    display: block;
@@ -477,7 +480,7 @@ time {
    background-color: #000;
    border-bottom: 1px solid #f5f5f5;
    border-radius: 5px;
-   font-size: 13px; 
+   font-size: 12px; 
 }
 .each-result-wrap {
    width: 100%;
@@ -489,12 +492,12 @@ time {
    text-transform: capitalize;
    margin: 0;
    font-weight: normal;
-   font-size: 12px;
+   font-size: 10px;
 }
 .day-result  p {
    line-height: 10px;
    margin: 0;
-   font-size: 12px;
+   font-size: 10px;
 }
 .get-started {
    display: block;
@@ -595,121 +598,8 @@ footer .fa-brands {
 
 
 
-
-                      /* Breakpoints */
-     /*(400-430px device)*/  
-     @media screen and (max-width: 430px) {
-        body {
-            width: 100%;
-        }
-        
-        table {
-            width: 400px;
-            margin-block-start: 30px;
-        }
-        .year {
-            font-weight: bold;
-            font-size: 17px;
-        }
-        .serial-num {
-            width: 30px;
-        }
-        .days {
-            width: 10px;
-        }
-        .winning,
-        .machine {
-            font-size: 16.5px;
-        } 
-     }
-
-
-     /*(360-393px device)*/  
-     @media screen and (max-width: 393px) {
-        body {
-            width: 100%;
-        }
-        
-        table {
-            width: 350px;
-            margin-block-start: 25px;
-        }
-        .year {
-            font-weight: bold;
-            font-size: 16px;
-        }
-        .serial-num {
-            width: 30px;
-        }
-        .winning,
-        .machine {
-            font-size: 15px;
-        } 
-     }
-     
-
-    /*(320px device)*/ 
-    @media screen and (max-width: 359px) {
-        body {
-            width: 100%;
-        }
-
-        table {
-            width: 300px;
-            margin-block-start: 20px;
-
-        }
-    
-        .line,
-        .serial-num {
-            display: none;
-        }
-        .winning,
-        .machine {
-            font-size: 18px;
-        }  
-    }
   
-     /* @media screen and (max-width: 929px) {
-                
-                nav {
-                    position: relative;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    padding-right: 100px;
-                    justify-content: space-between;
-                }
-                .class {
-                  margin: 0;
-                }
-                .hamburger,
-                .toggle-menu {
-                    display: block;
-                }
-                .toggle-menu {
-                    position: fixed;
-                    right: 3%;
-                }
-        ul {
-            justify-content: start;
-            flex-direction: column;
-            align-items: center;
-            position: fixed;
-            top: -50px;
-            right: -200%;
-            width: 98%;
-            height: 100vh;
-            background-color: var(--primary-color);
-            background-color: #fff;
-            padding-top: 20%;
-            z-index: 1;
-            transition: 0.5s;
-        }
-
-        nav ul li a {
-         color: #fff;
-        }
-    } */
+   
 @media (min-width: 767px) and (max-width: 999px) {
    .feature-wrap {
       grid-template-columns: repeat(2, 1fr);
@@ -727,9 +617,9 @@ footer .fa-brands {
 /* Small Devices (phones ≤ 599px) */
 /* ============================= */
 @media (max-width: 599px) {
-   body {
+   /* body {
       overflow-x: hidden;
-   }
+   } */
    header nav,
    .class,
    .login-signup-wrapper {
@@ -812,15 +702,34 @@ footer .fa-brands {
       align-items: center;
    }
 
+   /* Games results */
    .board-result {
       flex-direction: column;
       align-items: stretch;
+      margin: 0;
    }
+   table {
+      width: 300px;
+      margin: 4%;
+   }
+   caption {
+      text-transform: uppercase;
+      font-size: 10px;
+   }
+   th {
+      font-size: 10px;
+   }
+   .winning,
+   .machine {
+      font-size: 8px;
+   }
+
    .apply-now-btn,
    .get-started {
       width: 90%;
       font-size: 18px;
    }
+
 
    /* --- FOOTER --- */
    .fot-up-wraper {
@@ -849,3 +758,77 @@ footer .fa-brands {
       gap: 10px;
    }
 }
+
+
+
+                      /* Breakpoints */
+     /*(400-430px device)*/  
+     /* @media screen and (max-width: 430px) {
+        body {
+            width: 100%;
+        }
+        
+        table {
+            width: 400px;
+            margin-block-start: 30px;
+        }
+        .year {
+            font-weight: bold;
+            font-size: 17px;
+        }
+        .serial-num {
+            width: 30px;
+        }
+        .days {
+            width: 10px;
+        } */
+        /* .winning,
+        .machine {
+            font-size: 16.5px;
+        }  */
+     /* } */
+
+
+     /*(360-393px device)*/  
+     /* @media screen and (max-width: 393px) {
+        body {
+            width: 100%;
+        }
+        
+        table {
+            width: 350px;
+            margin-block-start: 25px;
+        }
+        .year {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .serial-num {
+            width: 30px;
+        }
+        .winning,
+        .machine {
+            font-size: 15px;
+        } 
+     }
+      */
+
+    /*(320px device)*/ 
+    /* @media screen and (max-width: 359px) {
+        body {
+            width: 100%;
+        } */
+
+        
+
+       
+/*     
+        .line,
+        .serial-num {
+            display: none;
+        } */
+        /* .winning,
+        .machine {
+            font-size: 18px;
+        }   */
+    /* } */

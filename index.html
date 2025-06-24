@@ -36,7 +36,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">       
       <link rel="stylesheet" href="index.css">
       <link rel="stylesheet" href="/carousel/caro-styles.css">
-      <link rel="stylesheet" href="responsive.css">
+      <!-- <link rel="stylesheet" href="responsive.css"> -->
     </head>
     <body>
 
@@ -47,9 +47,12 @@
 
       <header>
         <nav>
-          <button class="menu-toggle" onclick="toggleMenu()">☰</button>
           <div class="class">
             <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1749649983/VLB_logo_gpiyzr.png" alt="visual lotto board logo" width="50" height="50">
+
+            <input type="checkbox" class="toggle-menu">
+            <div class="hamburger"></div> 
+            
             <ul>
               <li><a class="nav-link" href="">Home</a></li>
               <li><a class="nav-link" href="#features">features</a></li>
@@ -458,7 +461,7 @@
               </div>
             </article>
 
-            <a class="get-started" href="">Get Started</a>
+            <a class="get-started" href="">Get Started for free</a>
           </div>  
         </section>
      
@@ -559,11 +562,11 @@
       </footer> 
       
       <script src="/carousel/caro-script.js"></script>
-      <script>
+      <!-- <script>
   function toggleMenu() {
     const navMenu = document.querySelector('nav ul');
     navMenu.classList.toggle('show-menu');
-  }
+  } -->
 </script>
 
     </body>

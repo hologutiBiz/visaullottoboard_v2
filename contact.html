@@ -11,25 +11,62 @@
   <style>
     .contact-section {
       max-width: 600px;
-      margin: 3rem auto;
+      margin: 1rem auto 3rem auto;
       padding: 2rem;
-      background-color: #f9f9f9;
+      background-color: #f5f5dc81;
       border-radius: 10px;
     }
 
-    .contact-section h2 {
+    .contact-us {
       color: #2282c7;
+      margin: 1rem;
+    }
+
+    form label span,
+    .query-type {
+      display: block;
+      text-align: justify;
+    }
+    form label input,
+    form textarea {
+      width: 100%;
+      padding: 0.5rem 0;
       margin-bottom: 1rem;
     }
 
-    form input,
-    form textarea {
+    .field {
+      display: flex;
+      text-align: justify;
+      gap: 20px;
+    }
+    .field label {
       width: 100%;
-      padding: 0.8rem;
+    }
+   
+    .query-field label {
+      display: flex;
+      /* justify-content: center; */
+      align-items: center;
+      width: 100%;
+      padding: 0.5rem 0;
       margin-bottom: 1rem;
+      background-color: #fff;
       border: 1px solid #ccc;
       border-radius: 5px;
+      gap: 0;
+      white-space: nowrap;
     }
+    .query-field label input[type="radio"] {
+      padding: 0;
+      margin: 0 ;
+      float: left;
+      align-self: flex-start;
+    }
+     .query-field label small {
+      width: 100%;
+      margin-right: 100px;
+     }
+
 
     form button {
       background-color: #10b981;
@@ -39,7 +76,6 @@
       border-radius: 5px;
       cursor: pointer;
     }
-
     form button:hover {
       background-color: #0e9e6e;
     }
@@ -63,8 +99,52 @@
     .contact-info a span {
       color: #000;
       display: block;
-      margin: 20px auto;
+      margin: 10px auto;
+      white-space: nowrap;
     }
+
+    @media (max-width: 768px) {
+  .contact-section {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .field {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .query-field {
+    flex-direction: column;
+  }
+
+  .query-field label {
+    flex-direction: row;
+    justify-content: flex-start;
+    white-space: normal;
+  }
+
+  .query-field label small {
+    margin-left: 0.5rem;
+    margin-right: 0;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .contact-info a {
+    padding: 1rem 0;
+  }
+
+  .contact-info a span,
+  .contact-info a p {
+    text-align: center;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -77,12 +157,12 @@
         <div class="hamburger"></div> 
         
         <ul>
-          <li><a class="nav-link" href="">Home</a></li>
-          <li><a class="nav-link" href="/contact.html" aria-current="page">Contact</a></li>
+          <li><a class="nav-link" href="/">Home</a></li>
+          <li><a class="nav-link" href="#" aria-current="page">Contact</a></li>
           <li><a class="nav-link" href="">About Us</a></li>
-          <li><a class="nav-link" href="#features">features</a></li>
+          <li><a class="nav-link" href="/#features">features</a></li>
           <li><a class="nav-link" href="">Results</a></li>
-          <li><a class="nav-link" href="#subscription">Subscription</a></li>
+          <li><a class="nav-link" href="/#subscription">Subscription</a></li>
         </ul>
       </div>
 
@@ -93,40 +173,71 @@
   </header>
 
   <main class="">
+    <h1 class="contact-us">Contact Us</h1>
     <section class="contact-section">
-  <h2>Contact Us</h2>
-  <p>Have a question or feedback? We’d love to hear from you.</p>
+      <form id="contact-form">
+        <div class="field name-field">
+          <label for="first_name">
+            <span>First Name</span>
+            <input name="first_name" id="first_name">
+          </label>
 
-  <form id="contact-form">
-    <input type="text" name="user_name" placeholder="Your Name" required />
-    <input type="email" name="user_email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+          <label for="last_name">
+            <span>Last Name</span>
+            <input name="last_name" id="last_name">
+          </label>
+        </div>
 
-  
-</section>
-  <div class="contact-info">
-    <a href="">
-      <i class="fa-solid fa-phone"></i>
-      <span>Call</span>
-      <p>+234 8059336938</p>
-    </a>
-    <a href="">
-      <i class="fa-solid fa-envelope"></i>
-      <span>Email</span>
-      <p>support@visuallottoboard.com</p>
-    </a>
-    <a href="">
-      <i class="fa-solid fa-location-dot"></i>
-      <span>Location</span>
-      <p>Yaba, Lagos</p>
-    </a>
+        <label for="email">
+          <span>Email</span>
+          <input type="email" name="email" id="email">
+        </label>
 
-    <!-- <p><strong>Phone:</strong> +234 800 000 0000</p>
-    <p><strong>Email:</strong> info@yourdomain.com</p>
-    <p><strong>Address:</strong> Lagos, Nigeria</p> -->
-  </div>
+        <div>
+          <span class="query-type">Query Type</span>
+          <div class="field query-field">
+            <label for="general-enquiry">
+              <input class="radio" type="radio" name="guery" id="general_enquiry" placeholder="General Enquiry">
+              <small>General Enquiry</small>
+            </label>
+
+            <label for="support_request">
+              <input type="radio" name="guery" id="support_request">
+              <small>Support Request</small>
+            </label>
+          </div>
+        </div>
+
+        <label for="">
+          <span >Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+
+
+
+    <div class="contact-info">
+      <a href="tel:+2348059336938">
+        <i class="fa-solid fa-phone"></i>
+        <span>Call</span>
+        <span>+2348 059 336 938</span>
+      </a>
+
+      <a href="mailto:support@visuallottoboard.com">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Email</span>
+        <span>support@visuallottoboard.com</span>
+      </a>
+
+      <a href="">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Location</span>
+        <span>Yaba, Lagos</span>
+      </a>
+    </div> 
   </main>
   
 

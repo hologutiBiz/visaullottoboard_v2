@@ -143,6 +143,28 @@
   .contact-info a p {
     text-align: center;
   }
+
+  .toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #10b981;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 }
 
   </style>
@@ -181,12 +203,12 @@
         <div class="field name-field">
           <label for="first_name">
             <span>First Name</span>
-            <input name="first_name" id="first_name">
+            <input type="text" name="first_name" id="first_name">
           </label>
 
           <label for="last_name">
             <span>Last Name</span>
-            <input name="last_name" id="last_name">
+            <input type="text" name="last_name" id="last_name">
           </label>
         </div>
 
@@ -218,9 +240,6 @@
       </form>
     </section>
 
-
-
-
     <div class="contact-info">
       <a href="tel:+2348059336938">
         <i class="fa-solid fa-phone"></i>
@@ -242,6 +261,51 @@
     </div> 
   </main>
   
+  <div id="toast" class="toast"></div>
 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    ( function() {
+      emailjs.init("BQysLPe_NPpvTICOe");
+    })(); 
+
+    function showToast(message, success = true) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.style.backgroundColor = success ? "#0b981" : "#ef4444";
+      toast.classList.add("show")
+
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3000)
+    }
+
+    function sendEmail(e) {
+      e.preventDefault();
+
+      const form = document.getElementById("contact-form");
+
+      emailjs.sendForm("service_5tnxk2l", "template_4oe61r6", form, "BQysLPe_NPpvTICOe")
+      .then(() => {
+
+        // Auto-reply
+        const userParams = {
+          first_name: form.first_name.value,
+          email: form.email.value,
+        };
+
+        return emailjs.send("service_5tnxk2l", "template_7kf98w9", userParams);
+      })
+      .then(() => {
+        showToast("Message sent successfully!");
+      })
+      .catch((err) => {
+        showToast("Oops, something went wrong.", false);
+        console.log(err);
+      });
+    }
+
+    document.getElementById("contact-form").addEventListener("submit", sendEmail);
+  </script>
 </body>
 </html>

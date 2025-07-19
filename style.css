@@ -478,6 +478,10 @@ footer .fa-brands {
    font-size: 14px;
 }
 
+.policies-wrapper a {
+   margin: auto 10px;
+}
+
 /*...>>>>>> Mobile Device Breakpoint <<<<<<....*/
 @media (min-width: 767px) and (max-width: 999px) {
    .feature-wrap {

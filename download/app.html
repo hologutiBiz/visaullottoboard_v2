@@ -7,6 +7,12 @@
   <meta name="description" content="Download lotto classification chart (counterpart)">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+   <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
+    </script>
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -64,13 +70,29 @@
       display: inline-block;
       margin-top: 1rem;
       padding: 0.5rem 1rem;
-      background-color: #673AB7;
       background-color: #2282c7;
       color: white;
       border-radius: 4px;
       text-decoration: none;
       font-weight: 600;
     }
+    .qr-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #counterpart_qrCode img {
+      background-color: #ff00ff;
+      width: 200px !important;
+      height: 250px !important;
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+    .qr-section p {
+      margin: 0;
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -97,8 +119,21 @@
       <img src="../assets/app-icons/lottoclassificationchart-icon-512.png" alt="App Icon">
       <h2>Lotto Classification Chart</h2>
       <p>Visualize number patterns and groupings to improve your strategy.</p>
-      <a href="https://play.google.com/store/apps/details?id=com.visuallottoboard.lottoclassificationchart" class="download-btn">Download</a>
+      <a href="https://play.google.com/store/apps/details?id=com.visuallottoboard.lottoclassificationchart" class="download-btn">Download <i class="fa-solid fa-download"></i></a>
+    
+      <div class="qr-section">
+        <div id="counterpart_qrCode" class="counterpart_qr-code"></div>
+        <p>Scan to download on mobile</p>
+      </div>
     </div>
+
+    <!-- <div class="app-card">
+      <img src="../assets/app-icons/lottoclassificationchart-icon-512.png" alt="App Icon">
+      <h2>Lotto Classification Chart</h2>
+      <p>Visualize number patterns and groupings to improve your strategy.</p>
+      <a href="https://play.google.com/store/apps/details?id=com.visuallottoboard.lottoclassificationchart" class="download-btn">Download </a>
+    
+    </div> -->
 
     <!-- <div class="app-card">
       <img src="icon2.png" alt="App Icon">
@@ -114,5 +149,6 @@
     &copy; 2025 Visual Lotto Board. All rights reserved.
   </footer>
 
+  <script src="../script/qrCode.js"></script>
 </body>
 </html>

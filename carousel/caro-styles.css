@@ -117,6 +117,16 @@
   font-weight: bold;
 }
 
+.chart-download-slide .carousel-btn {
+  background-color: #ff6600;
+}
+.chart-download-slide h2 {
+  color: #fff;
+}
+.chart-download-slide p {
+  color: #e0e0e0;
+}
+
 /* ===================================== */
 /* Small devices (phones, 0 - 599px)     */
 /* ===================================== */

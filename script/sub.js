@@ -10,7 +10,7 @@ function handleSubscription() {
             if (freeSubcription)
                 window.location.href = "https://premier-lotto-babaijebu-results.visuallottoboard.com";
             if (basicSubcription || proSubcription) 
-                window.location.href = "https://app.visuallottoboard.com/confirmation";
+                window.location.href = "https://app.visuallottoboard.com/subscription";
         })
     })  
 }

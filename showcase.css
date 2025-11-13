@@ -1,0 +1,82 @@
+.free-user-website {
+    height: 600px;
+    margin: 0;
+    padding: 0;
+}
+.free-user-website h1 {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+.device-wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+.baba-ijebu {
+    color: #ed3b3b;
+}
+.small-device,
+.large-device {
+    display: flex;
+    justify-content: space-around;
+}
+.free-user-website img {
+    object-fit: contain;
+    width: 250px;
+    height: 450px;
+}
+
+.qr-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 300px;
+    border: 3px solid #2282c7;
+    background-color: #ffffff;
+    border-radius: 5px;
+    z-index: 20;
+}
+#qr-code img {
+    align-self: center !important;
+    width: 200px !important;
+    height: 200px !important;
+}
+.qr-box a {
+    display: block;
+    color: blue;
+    font-size: 7pt;
+    margin-top: 10px;
+    white-space: nowrap;
+}
+
+hr {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    width: 50%;
+    z-index: -1;
+    height: 2px;
+    background-color: #2282c7;
+}
+.img {
+   
+    margin: 50%;
+}
+
+.counterpart-section {
+   
+    width: 100%;
+    background-color: #000;
+}
+.counterpart-section h1 {
+    color: #ccc;
+    text-align: center;
+    padding: 2rem;
+}
+.content {
+    
+}

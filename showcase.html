@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Case</title>
+
+    <link rel="stylesheet" href="showcase.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+</head>
+<body>
+    <section class="free-user-website">
+        <h1>All <span class="baba-ijebu">Baba Ijebu</span> 25 games in a click</h1>
+        <div class="small-device">
+            <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1758633495/All-games-on-small-device_xwkwgj.png" alt="">
+            
+            <div class="contents-wrapper">
+                <div class="qr-box">
+                    <div id="qr-code"></div>
+                    <a href="https://premier-lotto-babaijebu-results.visuallottoboard.com">https://premier-lotto-babaijebu-results.visuallottoboard.com</a>
+                    <p>Scan the QR Code</p>
+                </div>
+                <hr>
+            </div>
+            
+            <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1758633074/premier-jackpot-cover_ugf4az.png" alt="">
+        </div>
+    </section>
+
+    <section class="counterpart-section">
+        <h1>Lotto Classification Chart (counterpart) On Your Phone</h1>
+        <div class="content">
+            <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1751107320/iPhone-12-PRO-lottoclassificationchart.visuallottoboard.com_c7aj0w.png" alt="">
+            <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1751937856/iPad-Mini-lottoclassificationchart.visuallottoboard.com_fcv9jv.png" alt="">
+        </div>
+    </section>
+
+    <script>
+        // Lotto Classification Chart app
+        var qrCode = new QRCode("qr-code", {
+            text: "https://premier-lotto-babaijebu-results.visuallottoboard.com",
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+    </script>
+</body>
+</html>

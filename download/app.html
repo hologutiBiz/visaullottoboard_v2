@@ -29,9 +29,8 @@
     header {
       background-color: #673AB7;
       background-color: #2282c7;
-
       color: white;
-      padding: 2rem;
+      padding: 0.7rem;
       text-align: center;
     }
     .hero a img {
@@ -75,16 +74,7 @@
       font-size: 0.95rem;
       color: #666;
     }
-    .download-btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #2282c7;
-      color: white;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 600;
-    }
+    
     .qr-section {
       display: flex;
       flex-direction: column;
@@ -109,6 +99,98 @@
       background-color: #eee;
       color: #555;
     }
+
+    .main-contents-box {
+      margin: 2%;
+    }
+
+    .new-app-card {
+      padding-bottom: 25px;
+      background-color: #eee;
+      border-radius: 5px;
+    }
+
+    .new-app-card:hover {
+      background-color: #444;
+      transition: 1s;
+    }
+    .new-app-card:hover p {
+      color: #fff;
+    }
+
+    .new-app-card p {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .blr-card {
+      margin: 5rem auto;
+    }
+
+    .app-contents-wrapper {
+      display: flex;
+      width: 96%;
+      padding: 2rem 0;
+      text-align: center;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-y: -75px;
+    }
+
+    .app-contents {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      margin: 50px auto auto 70%;
+      border-radius: 10px;
+    }
+
+    .lcc-wraper {
+      background-image: url("https://res.cloudinary.com/ddatfadov/image/upload/v1764785412/Feature-Graphic_LCC_qp9j3r.png");
+    }
+
+    .blr-wrapper {
+      background-image: url("https://res.cloudinary.com/ddatfadov/image/upload/v1764785383/Feature_Graphic_-_Baba_Ijebu_Lotto_Results_qx1fkv.png");
+    }
+   
+    .lcc-wraper .lcc-contents {
+      background-color: #1a6aa8;
+    }
+
+    .blr-wrapper .blr-contents {
+      background-color: #fff;
+    }
+    
+    .download-btn {
+      color: #2282c7;
+      color: #fff;
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff;
+      background-color: #000;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .download-btn:hover {
+      color: #000;
+      background-color: #f5f5f5;
+      transition: 0.5s ease-in-out;
+    }
+
+    .blr-contents .download-btn {
+      background-color: #2282c7;
+    }
+    .app-contents img {
+      border-radius: 10px;
+    }
+   
+    
   </style>
 </head>
 <body>
@@ -117,40 +199,44 @@
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <header class="hero">
-      <a href="/" aria-label="home">
-        <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1749649983/VLB_logo_gpiyzr.png" alt="" width="50" >
-      </a>
-      <div>
-          <h1>Explore Visual Lotto Board Apps</h1>
-          <p>Smart tools to analyze, classify, and strategize your lotto numbers.</p>
-      </div>
-  </header>
+    <header class="hero">
+        <a href="/" aria-label="home">
+          <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1749649983/VLB_logo_gpiyzr.png" alt="" width="50" >
+        </a>
+        <div>
+            <h1>Explore Visual Lotto Board Apps</h1>
+            <p>Smart tools to analyze, classify, and strategize your lotto numbers.</p>
+        </div>
+    </header>
 
-  <section class="app-grid">
-    <div class="app-card" id="counterpartApp">
-      <img src="../assets/app-icons/lottoclassificationchart-icon-512.png" alt="Lotto classification chart app icon">
-      <h2>Lotto Classification Chart</h2>
-      <p>Visualize number patterns and groupings to improve your strategy.</p>
-      <a href="https://play.google.com/store/apps/details?id=com.visuallottoboard.lottoclassificationchart" class="download-btn">Download <i class="fa-solid fa-download"></i></a>
-    
-      <div class="qr-section">
-        <div id="counterpart_qrCode" class="qr-code"></div>
-        <p>Scan to download on mobile</p>
-      </div>
-    </div>
+    <main>
+        <div class="main-contents-box">
+            <section class="new-app-card">
+                <p>Visualize number patterns and groupings to improve your strategy.</p>
 
-    <div class="app-card">
-      <img src="../assets/app-icons/app-icon_babaijebulottoresults.png" alt="Baba ijebu lotto results app icon">
-      <h2>Baba Ijebu Lotto Results</h2>
-      <p>View Baba Ijebu results instantly! 25 games, year archive, easy navigation.</p>
-      <a href="https://play.google.com/store/apps/details?id=com.visuallottoboard.babaijeburesults" class="download-btn">Download <i class="fa-solid fa-download"></i></a>
-    
-      <div class="qr-section">
-        <div id="babaIjebuResultApp_qrCode" class="qr-code"></div>
-        <p>Scan to download on mobile</p>
-      </div>
-    </div>
+                <div class="app-contents-wrapper lcc-wraper">
+                    <div class="app-contents lcc-contents">
+                        <a class="download-btn" href="https://play.google.com/store/apps/details?id=com.visuallottoboard.lottoclassificationchart">Download <i class="fa-solid fa-download"></i></a>
+                        <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1764798105/Scan_to_download_on_mobile_ueayom.png" alt="QR code to download lotto lotto classification chart app on Play Store">
+                    </div>
+                </div> 
+           </section>
+
+           <!-- Baba ijebu lotto results app -->
+           <section class="new-app-card blr-card">
+                <p>View Baba Ijebu results instantly! 25 games, year archive, easy navigation.</p>
+
+                <div class="app-contents-wrapper blr-wrapper">
+                    <div class="app-contents blr-contents">
+                        <a href="https://play.google.com/store/apps/details?id=com.visuallottoboard.babaijeburesults" class="download-btn">Download <i class="fa-solid fa-download"></i></a>
+                        <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1764798105/QR_Code_for_mobile_apps_lglda5.png" alt="QR code to download Baba Ijebu lotto results app on Play Store">
+                    </div>
+                </div> 
+           </section>
+        </div>
+    </main>
+
+  
 
     <!-- <div class="app-card">
       <img src="icon2.png" alt="App Icon">

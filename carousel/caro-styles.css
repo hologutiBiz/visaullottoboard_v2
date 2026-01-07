@@ -127,6 +127,18 @@
   color: #e0e0e0;
 }
 
+.green-results-slide .carousel-btn {
+  background-color: #16a34a; /* Lotto green */
+  color: #fff;
+}
+.green-results-slide h2 {
+  color: #fff;
+}
+.green-results-slide p {
+  color: #e5e5e5;
+}
+
+
 /* ===================================== */
 /* Small devices (phones, 0 - 599px)     */
 /* ===================================== */

@@ -1,287 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Tag Manager -->
+    <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-M9582TWK');</script>
-  <!-- End Google Tag Manager -->
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Download App | Visual Lotto Board</title>
-  <meta name="description" content="Download lotto classification chart (counterpart)">
+    <!-- End Google Tag Manager -->
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Apps - Visual Lotto Board</title>
+    <meta name="description" content="Download lotto classification chart (counterpart)">
+    <meta name="description" content="Access the best tools for lottery analysis. Download Baba Ijebu Results and Lotto Classification Chart apps directly from the Google Play Store.">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-  
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: #673AB7;
-      background-color: #2282c7;
-      color: white;
-      padding: 0.7rem;
-      text-align: center;
-    }
-    .hero a img {
-      float: left;
-      border-radius: 50%;
-    }
-    .hero h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    .hero p {
-      margin-top: 0.5rem;
-      font-size: 1rem;
-    }
-    .app-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-    }
-    .app-card {
-      width: 300px;
-      /* height: 350px; */
-      padding: 1rem;
-      text-align: center;
-      margin: auto 0;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .app-card img {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 1rem;
-    }
-    .app-card h2 {
-      font-size: 1.2rem;
-      margin: 0.5rem 0;
-    }
-    .app-card p {
-      font-size: 0.95rem;
-      color: #666;
-    }
-    
-    .qr-section {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .qr-code img {
-      background-color: #ff00ff;
-      width: 175px !important;
-      height: 200px !important;
-      margin-top: 20px;
-      margin-bottom: 0;
-    }
-    .qr-section p {
-      margin: 0;
-    }
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://visuallottoboard.com/download/app">
+    <meta property="og:title" content="Visual Lotto Board - Professional Lottery Tools">
+    <meta property="og:description" content="Track results, analyze charts, and visualize your lottery data with our suite of Android apps. Get them now on Google Play!">
+    <meta property="og:image" content="https://res.cloudinary.com/ddatfadov/image/upload/v1768640905/Banner_vlb-Download-page_xc8isi.png">
 
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.85rem;
-      background-color: #eee;
-      color: #555;
-    }
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://visuallottoboard.com/download/app">
+    <meta property="twitter:title" content="Visual Lotto Board - Professional Lottery Tools">
+    <meta property="twitter:description" content="Track results and analyze charts with our suite of Android apps. Available now on Google Play.">
+    <meta property="twitter:image" content="https://res.cloudinary.com/ddatfadov/image/upload/v1768640905/Banner_vlb-Download-page_xc8isi.png">
 
-    .main-contents-box {
-      margin: 2%;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app-style.css">
 
-    .new-app-card {
-      padding-bottom: 25px;
-      background-color: #eee;
-      border-radius: 5px;
-    }
-
-    .new-app-card:hover {
-      background-color: #444;
-      transition: 1s;
-    }
-    .new-app-card:hover p {
-      color: #fff;
-    }
-
-    .new-app-card p {
-      text-align: center;
-      font-weight: bold;
-    }
-
-    .blr-card {
-      margin: 5rem auto;
-    }
-
-    .app-contents-wrapper {
-      display: flex;
-      width: 96%;
-      padding: 2rem 0;
-      text-align: center;
-      margin: auto;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position-y: -75px;
-    }
-
-    .app-contents {
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-      margin: 50px auto auto 70%;
-      border-radius: 10px;
-    }
-
-    .lcc-wraper {
-      background-image: url("https://res.cloudinary.com/ddatfadov/image/upload/v1764785412/Feature-Graphic_LCC_qp9j3r.png");
-    }
-
-    .blr-wrapper {
-      background-image: url("https://res.cloudinary.com/ddatfadov/image/upload/v1764785383/Feature_Graphic_-_Baba_Ijebu_Lotto_Results_qx1fkv.png");
-
-    }
-   
-    .lcc-wraper .lcc-contents {
-      background-color: #fff;
-      box-shadow: 0 2px 8px #000;
-
-    }
-
-    .blr-wrapper .blr-contents {
-      background-color: #fff;
-      box-shadow: 0 2px 8px rgba(250,250,250,0.1);
-
-    }
-    
-    .download-btn {
-      color: #2282c7;
-      color: #fff;
-      display: inline-block;
-      margin-bottom: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #fff;
-      background-color: #000;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 600;
-      border: 1px solid #33333300;
-    }
-    .download-btn:hover {
-      color: #000;
-      background-color: #f5f5f5;
-      border: 1px solid #333;
-      transition: 0.5s ease-in-out;
-    }
-
-    .blr-contents .download-btn {
-      background-color: #2282c7;
-    }
-    .app-contents img {
-      border-radius: 10px;
-      box-shadow: 0 3px 6px rgba(116, 114, 114, 0.589);
-
-      
-    }
-   
-    @media screen and (max-width: 999px) {
-      .new-app-card {
-        display: flex;
-        flex-direction: column;
-        /* margin: auto 0; */
-        padding: 3rem 0;
-        justify-content: center;
-        align-items: center;
-        
-    }
-
-      .app-contents {
-        
-        /* display: flex;
-        flex-direction: column;
-        padding: 20px;
-        margin: 50px auto auto 70%;
-        border-radius: 10px; */
-        margin: 0 !important;
-    }
-    }
-  </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9582TWK"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+    <!-- End Google Tag Manager (noscript) -->
 
-    <header class="hero">
-        <a href="/" aria-label="home">
-          <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1749649983/VLB_logo_gpiyzr.png" alt="" width="50" >
+    <header class="page-header">
+        <a href="/">
+            <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1749649983/VLB_logo_gpiyzr.png" alt="logo">
         </a>
-        <div>
-            <h1>Explore Visual Lotto Board Apps</h1>
-            <p>Smart tools to analyze, classify, and strategize your lotto numbers.</p>
+        <div class="container">
+            <h1>Unlock Your Lottery Potential.</h1>
+            <p>Explore our suite of powerful apps designed to help you analyze, track, and visualize lottery results with ease. More tools coming soon!</p>
         </div>
     </header>
 
-    <main>
-        <div class="main-contents-box">
-            <section class="new-app-card">
-                <p>Visualize number patterns and groupings to improve your strategy.</p>
+    <aside>
+        <div class="all-apps-link">
+            <p>Want to see our full suite of tools?</p>
+            <a class="btn-secondary" href="https://play.google.com/store/apps/dev?id=5543335759437686617" target="_blank">
+                View all apps on Google Play
+            </a>
+        </div>
+    </aside>
 
-                <div class="app-contents-wrapper lcc-wraper">
-                    <div class="app-contents lcc-contents">
-                        <a class="download-btn" href="https://play.google.com/store/apps/details?id=com.visuallottoboard.lottoclassificationchart">Download <i class="fa-solid fa-download"></i></a>
-                        <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1764798105/Scan_to_download_on_mobile_ueayom.png" alt="QR code to download lotto lotto classification chart app on Play Store">
+    <main class="app-listing">
+        <div class="container">
+            <div class="app-cards-grid">
+                <!-- Baba Ijebu Lotto Results-->
+                <div class="app-card">
+                    <div class="app-icon">
+                        <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1768587137/icon-192-maskable_dlrqcd.png" alt="Baba Ijebu Lotto Results Icon">
                     </div>
-                </div> 
-           </section>
 
-           <!-- Baba ijebu lotto results app -->
-           <section class="new-app-card blr-card">
-                <p>View Baba Ijebu results instantly! 25 games, year archive, easy navigation.</p>
+                    <h2>Baba Ijebu Lotto Results</h2>
+                    <p>Get real-time updates and historical results for all Baba Ijebu lotteries. Track your favorite games, analyze past draws, and never miss a winning number again.</p>
+                    
+                    <div class="download-options">
+                        <a class="btn google-play-btn" href="https://play.google.com/store/apps/details?id=com.visuallottoboard.babaijeburesults" target="_blank">
+                            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+                        </a>
+                        <div class="qr-code-section">
+                            <div class="qr-code" data-url="https://play.google.com/store/apps/details?id=com.visuallottoboard.babaijeburesults"></div>
+                            <p>Scan to download</p>
+                        </div>
+                        <div class="version-info">
+                            <span>Version: 1.0.3</span> | <time datetime="2025-11-21">Last Updated: 2025-11-21</time>
+                        </div>
 
-                <div class="app-contents-wrapper blr-wrapper">
-                    <div class="app-contents blr-contents">
-                        <a href="https://play.google.com/store/apps/details?id=com.visuallottoboard.babaijeburesults" class="download-btn">Download <i class="fa-solid fa-download"></i></a>
-                        <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1764798105/QR_Code_for_mobile_apps_lglda5.png" alt="QR code to download Baba Ijebu lotto results app on Play Store">
+                         <!-- <div class="share-actions">
+                            <a href="javascript:void(0)" onclick="shareWhatsApp('Baba Ijebu Lotto Results', 'YOUR_BABA_IJEBU_ID')" class="btn-whatsapp">
+                                Share on WhatsApp
+                            </a> -->
                     </div>
-                </div> 
-           </section>
+                </div>
+
+                <!-- Lotto Classification Chart-->
+                <div class="app-card">
+                    <div class="app-icon">
+                        <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1768583876/icon-192_vskd3f.png" alt="Lotto Classification Chart Icon">
+                    </div>
+
+                    <h2>Lotto Classification Chart</h2>
+                    <p>Dive deeper into your lottery numbers with advanced classification and charting tools. Identify patterns, hot and cold numbers, and improve your statistical edge.</p>
+
+                    <div class="download-options">
+                        <a class="btn google-play-btn" href="https://play.google.com/store/apps/details?id=com.visuallottoboard.lottoclassificationchart" target="_blank">
+                            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+                        </a>
+                        <div class="qr-code-section">
+                            <div class="qr-code" data-url=" https://play.google.com/store/apps/details?id=com.visuallottoboard.lottoclassificationchart"></div>
+                            <p>Scan to download</p>
+                        </div>
+                        <div class="version-info">
+                            <span>Version: 1.2.7</span> | <time datetime="2025-10-28">Last Updated: 2025-10-28</time>
+                        </div>
+                    </div>
+                </div>    
+            </div>
         </div>
     </main>
 
-  
+    <!-- <aside class="safety-faq">
+    <div class="container">
+        <div class="faq-box">
+            <h3><span class="icon">🛡️</span> Why do I see a "File may be harmful" warning?</h3>
+            <p>Don't worry! This is a standard security message from Android for any app installed outside the Google Play Store. Because <strong>Visual Lotto Board</strong> is the official developer, we guarantee this file is 100% safe, verified, and malware-free.</p>
+            
+            <div class="steps-grid">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <p>Click <strong>"Download Anyway"</strong> on the browser prompt.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <p>Open the file and tap <strong>"Settings"</strong> if prompted.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <p>Toggle on <strong>"Allow from this source"</strong> and finish installing.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </aside> -->
 
-    <!-- <div class="app-card">
-      <img src="icon2.png" alt="App Icon">
-      <h2>Lotto History Analyzer</h2>
-      <p>Track past draws and discover repeating trends across time.</p>
-      <a href="https://play.google.com/store/apps/details?id=your.other.app" class="download-btn">Download</a>
-    </div> -->
+    <footer class="page-footer">
+        <div class="all-apps-link">
+            <p>Want to see our full suite of tools?</p>
+            <a href="https://play.google.com/store/apps/dev?id=5543335759437686617" target="_blank" class="btn-secondary">
+                View all apps on Google Play
+            </a>
+        </div>
+        <div class="container">
+            <p>&copy; 2025 Visual Lotto Board. All rights reserved.</p>
+        </div>
+    </footer>
 
-    <!-- Add more app cards here -->
-  </section>
+    <script>
+        /* document.querySelectorAll('.qr-code').forEach(container => {
+            const url = container.getAttribute('data-url');
+            new QRCode(container, {
+                text: url,
+                width: 128,
+                height: 128,
+                colorDark : "#2c3e50",
+                colorLight : "#ffffff",
+                correctLevel : QRCode.CorrectLevel.H,
+                useSVG: false // This ensures it uses Canvas
+            });
+        }); */
 
-  <footer>
-    &copy; 2025 Visual Lotto Board. All rights reserved.
-  </footer>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('.qr-code').forEach(container => {
+                const url = container.getAttribute('data-url');
+                new QRCode(container, {
+                    text: url,
+                    width: 140,
+                    height: 140,
+                    colorDark : "#2c3e50",
+                    colorLight : "#ffffff",
+                    correctLevel : QRCode.CorrectLevel.H
+                });
+            });
+        });
 
-  <script src="../script/qrCode.js"></script>
+        // WhatsApp Share Function
+        // function shareWhatsApp(appName, appId) {
+        //     const url = `https://play.google.com/store/apps/details?id=${appId}`;
+        //     const text = encodeURIComponent(`Check out the ${appName} app on Visual Lotto Board: ${url}`);
+        //     window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+        // }
+    </script>
 </body>
 </html>

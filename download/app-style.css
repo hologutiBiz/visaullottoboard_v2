@@ -1,0 +1,241 @@
+/* General Body & Typography */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Light background */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.page-header {
+    color: #ffffff;
+    background-color: #2282c7;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-header img {
+    width: 60px;
+    border-radius: 50%;
+    margin-bottom: 0;
+}
+
+.page-header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* App Listing & Grid */
+.app-listing {
+    padding: 40px 0;
+}
+
+.app-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive grid */
+    gap: 30px;
+}
+
+/* Individual App Card */
+.app-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes footer to bottom */
+}
+
+.app-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.app-icon img {
+    width: 90px;
+    height: 90px;
+    border-radius: 20%; /* Softer corners for icons */
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.app-card h2 {
+    font-size: 1.8em;
+    color: #34495e; /* Darker blue */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.app-card p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Allows paragraph to take available space */
+}
+
+/* Download Options */
+.download-options {
+    margin-top: auto; /* Pushes download section to the bottom of the card */
+}
+
+.btn.google-play-btn {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.btn.google-play-btn img {
+    height: 60px; /* Adjust Google Play badge size */
+    width: auto;
+    border-radius: 0;
+    box-shadow: none;
+}
+.google-play-btn img {
+    height: 60px;
+    transition: transform 0.2s;
+}
+
+.google-play-btn:hover img {
+    transform: scale(1.05);
+}
+
+
+.qr-code-section {
+    margin: 20px 0;
+}
+
+/* .qr-wrapper {
+    margin: 20px 0;
+    text-align: center;
+} */
+
+/* qrcode.js generates a canvas or img inside your div */
+.qr-code canvas, .qr-code img {
+    margin: 0 auto;
+    border: 4px solid #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* .btn-whatsapp {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+} */
+
+.qr-code-section p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* .qr-code-img {
+    width: 120px;
+    height: 120px;
+    border: 1px solid #eee;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+} */
+
+
+
+.version-info {
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 20px;
+}
+
+.version-info span {
+    margin: 0 5px;
+}
+
+/* Footer */
+.page-footer {
+    background-color: #34495e; /* Darker blue from header */
+    color: #ecf0f1; /* Light grey text */
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+.all-apps-link {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: transparent;
+    border: 2px solid #3498db;
+    color: #3498db;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.5em;
+    }
+    .page-header p {
+        font-size: 1em;
+    }
+    .app-card {
+        padding: 25px;
+    }
+    .app-card h2 {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 2em;
+    }
+    .page-header p {
+        font-size: 0.9em;
+    }
+    .qr-code-section {
+        display: none;
+    }
+}

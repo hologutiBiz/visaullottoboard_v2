@@ -43,7 +43,7 @@
       <link rel="stylesheet" href="/carousel/caro-styles.css">
       <!-- <link rel="stylesheet" href="responsive.css"> -->
 
-      <style>
+      <!-- <style>
 .newsletter {
   background: #f8f9fa;
   padding: 40px 20px;
@@ -177,6 +177,31 @@ input[type="email"] {
     }
 }
 </style>
+<style>
+    .newsletter-wrap { padding: 40px; text-align: center; background: #111; color: white; border-radius: 8px; }
+    .input-container { display: flex; gap: 10px; justify-content: center; margin-top: 20px; }
+    
+    #emailInput { padding: 12px; border-radius: 4px; border: 1px solid #333; background: #222; color: white; width: 250px; }
+    #submitBtn { padding: 12px 24px; background: #3b82f6; border: none; border-radius: 4px; color: white; cursor: pointer; min-width: 120px; }
+    #submitBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    .message { margin-top: 15px; padding: 10px; border-radius: 4px; display: none; }
+    .message.show { display: block; }
+    .message.success { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
+    .message.error { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+
+    /* Spinner for your setLoading function */
+    .spinner {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border: 2px solid rgba(255,255,255,.3);
+        border-radius: 50%;
+        border-top-color: #fff;
+        animation: spin 1s ease-in-out infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+</style> -->
     </head>
     <body>
       <!-- Google Tag Manager (noscript) -->
@@ -519,18 +544,20 @@ input[type="email"] {
             </div>
         </section> -->
 
-        <section class="newsletter"> 
+        <section class="section-newsletter"> 
           <h3>Subscribe to Our Newsletter</h3> 
           <p> Stay updated on forecast tips, app features, Lotto results, and exclusive insights delivered straight to your inbox.</p> 
           <form class="newsletter-form" id="newsletterForm"> 
+            <div class="input-container">
             <input type="email" name="email" id="emailInput" placeholder="Enter your email address" required autocomplete="email"> 
             <button type="submit" id="submitBtn">
               <span id="btnText">Subscribe</span>
             </button> 
+            </div>
           </form> 
 
           <div id="messageBox"></div>
-          <p class="privacy-notice">We respect your privacy. Unsubscribe at any time.</p>
+          <small class="privacy-notice">We respect your privacy. Unsubscribe at any time.</small>
         </section>
 
         <!-- <section class="newsletter-section">
@@ -650,6 +677,9 @@ input[type="email"] {
       
       <script src="/carousel/caro-script.js"></script>
       <script src="/script/sub.js"></script>
+      
+      <!-- Load Supabase SDK first -->
+      <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
       <script src="/script/newsletter.js"></script>
     </body>
 </html>

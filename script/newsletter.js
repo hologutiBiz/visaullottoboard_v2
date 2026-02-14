@@ -107,7 +107,7 @@ async function subscribeNewsletter(email) {
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const email = emailInput.ariaValueMax.trim();
+    const email = emailInput.value.trim();
 
     setLoading(true);
     messageBox.classList.remove('show');

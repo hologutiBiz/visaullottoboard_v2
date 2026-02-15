@@ -43,165 +43,147 @@
       <link rel="stylesheet" href="/carousel/caro-styles.css">
       <!-- <link rel="stylesheet" href="responsive.css"> -->
 
-      <!-- <style>
-.newsletter {
-  background: #f8f9fa;
-  padding: 40px 20px;
-  text-align: center;
-  border-radius: 12px;
-  max-width: 600px;
-  margin: 40px auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-.newsletter h2 {
-  color: #007bff;
-  margin-bottom: 15px;
-}
-.newsletter p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-.newsletter-form {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-.newsletter-form input[type="email"] {
-  padding: 10px;
-  font-size: 16px;
-  flex: 1;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-.newsletter-form button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-.newsletter-form button:hover {
-  background: #0056b3;
-}
-
-.newsletter-section {
-    background: #f8f9fa; /* Or a dark theme like #1a1a1a */
-    padding: 60px 20px;
-    border-radius: 12px;
-    margin: 40px 0;
-}
-
-.newsletter-container {
-    max-width: 1000px;
+      <style>
+        /* Container & Section Setup */
+.agency-grid-section {
+    padding: 80px 20px;
+    max-width: 1100px;
     margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+.content-header {
+    margin-bottom: 50px;
+}
+
+.agency-tag {
+    background: #e6f4ea;
+    color: #1e7e34;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.content-header h2 {
+    font-size: 2.5rem;
+    margin-top: 15px;
+    color: #1a1a1a;
+}
+
+/* Card Layout */
+.card-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
 }
 
-.newsletter-content h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.newsletter-features {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
-.newsletter-features li {
-    margin-bottom: 10px;
-    padding-left: 25px;
-    position: relative;
-}
-
-/* Add a checkmark or bullet */
-.newsletter-features li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #28a745;
-    font-weight: bold;
-}
-
-.input-group {
+.agency-card {
+    background: #ffffff;
+    border: 1px solid #eee;
+    padding: 40px 30px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-input[type="email"] {
-    flex: 1;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 1rem;
+/* Make the Results Portal stand out */
+.agency-card.highlight {
+    border: 2px solid #28a745;
+    box-shadow: 0 10px 30px rgba(40, 167, 69, 0.1);
+    transform: translateY(-5px);
 }
 
-.btn-subscribe {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.card-icon img {
+    width: 7rem;
+    /* margin-bottom: 20px; */
+}
+
+.agency-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.agency-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Links & Buttons */
+.text-link {
+    color: #28a745;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-bottom: 2px solid transparent;
     transition: 0.3s;
 }
 
-.btn-subscribe:hover {
-    background: #0056b3;
+.text-link:hover {
+    border-bottom: 2px solid #28a745;
+    padding-bottom: 4px;
 }
 
-.form-footer {
-    font-size: 0.8rem;
-    color: #777;
-    margin-top: 10px;
+.status-badge {
+    font-size: 0.75rem;
+    background: #f1f1f1;
+    padding: 4px 12px;
+    border-radius: 4px;
+    color: #555;
+    font-weight: 600;
 }
 
-/* Responsive for Mobile */
+/* Bottom CTA Box */
+.cta-box {
+    background: #111;
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.cta-box p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.btn-apply {
+    background: #28a745;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.btn-apply:hover {
+    transform: scale(1.05);
+    background: #218838;
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .newsletter-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .newsletter-features li {
-        text-align: left;
-    }
-    .input-group {
-        flex-direction: column;
-    }
+    .content-header h2 { font-size: 1.8rem; }
+    .card-container { grid-template-columns: 1fr; }
 }
-</style>
-<style>
-    .newsletter-wrap { padding: 40px; text-align: center; background: #111; color: white; border-radius: 8px; }
-    .input-container { display: flex; gap: 10px; justify-content: center; margin-top: 20px; }
-    
-    #emailInput { padding: 12px; border-radius: 4px; border: 1px solid #333; background: #222; color: white; width: 250px; }
-    #submitBtn { padding: 12px 24px; background: #3b82f6; border: none; border-radius: 4px; color: white; cursor: pointer; min-width: 120px; }
-    #submitBtn:disabled { opacity: 0.6; cursor: not-allowed; }
-
-    .message { margin-top: 15px; padding: 10px; border-radius: 4px; display: none; }
-    .message.show { display: block; }
-    .message.success { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
-    .message.error { background: rgba(239, 68, 68, 0.2); color: #f87171; }
-
-    /* Spinner for your setLoading function */
-    .spinner {
-        display: inline-block;
-        width: 18px;
-        height: 18px;
-        border: 2px solid rgba(255,255,255,.3);
-        border-radius: 50%;
-        border-top-color: #fff;
-        animation: spin 1s ease-in-out infinite;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-</style> -->
+      </style>
+     
     </head>
     <body>
       <!-- Google Tag Manager (noscript) -->
@@ -362,19 +344,39 @@ input[type="email"] {
           </div>
         </section>
 
-        <section class="section-green-lotto" id="greenlotto">
+        <!-- Green Lotto-->
+        <!-- <section class="section-green-lotto" id="greenlotto">
           <div class="green-lotto-all-content-box">
-            <h3>green lotto agency</h3>
-            <p>We provide official Green Lotto terminals to approved individuals who want to grow their lottery business.</p>
-            <div>
-              <ul>
-                <li>Terminal</li>
-                <li>POS</li>
-              </ul>
-              <p>Become an agent</p>
-              <button class="apply-now-btn">apply now</button>
+        </section> -->
+
+        <section class="agency-grid-section">
+            <div class="content-header">
+                <span class="agency-tag">Official Green Lotto Agency</span>
+                <h2>Sales Terminal. Real-Time Results.</h2>
             </div>
-          </div>
+
+            <div class="card-container">
+                <div class="agency-card highlight">
+                    <div class="card-icon">
+                      <img src="assets/app-icons/greenlotto-maskable.png" alt="">
+                    </div>
+                    <h3>Live Results Portal</h3>
+                    <p>Access our custom-built website for real-time draw updates and games complete results.</p>
+                    <a class="text-link" href="https://green-lotto-result.visuallottoboard.com" target="_blank">View Live Results →</a>
+                </div>
+
+                <div class="agency-card">
+                    <div class="card-icon">📟</div>
+                    <h3>Official Terminals</h3>
+                    <p>We provide portable terminals to approved individuals to grow their lottery business.</p>
+                    <span class="status-badge">Available Now</span>
+                </div>
+            </div>
+
+            <div class="cta-box">
+                <p>Ready to start your journey as an authorized agent?</p>
+                <a href="contact.html" class="btn-apply">Apply for Terminal</a>
+            </div>
         </section>
         
 

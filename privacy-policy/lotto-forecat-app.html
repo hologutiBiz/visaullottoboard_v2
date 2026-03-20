@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M9582TWK');</script>
+    <!-- End Google Tag Manager -->
+     
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Lotto Forecast App | Visual Lotto Board</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #2282c7;
+      --dark-blue: #1a5fa0;
+      --header-gradient-start: #667eea;
+      --secondary-green: #059669;
+      --accent-gold: #f59e0b;
+      --bg-light-gray: #e8eaed;
+      --bg-lighter: #f9fafb;
+      --border-gray: #d0d0d0;
+      --bg-card: #f0f2f5;
+      --dark-bg: #1f2937;
+      --text-dark: #111827;
+      --text-light: #6b7280;
+      --white: #ffffff;
+      --cream-bg: rgba(245,245,220,0.47);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--bg-lighter);
+      color: var(--text-dark);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    /* ─── HEADER ─────────────────────────────────────────────── */
+    header {
+      background: linear-gradient(135deg, var(--header-gradient-start) 0%, var(--primary-color) 55%, var(--dark-blue) 100%);
+      color: var(--white);
+      padding: 56px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 40%, rgba(245,158,11,.2) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .header-badge {
+      display: inline-block;
+      background: var(--accent-gold);
+      color: var(--dark-bg);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    header h1 span { color: var(--accent-gold); }
+    .header-sub {
+      font-size: 13px;
+      opacity: .75;
+      margin-top: 6px;
+      letter-spacing: .5px;
+    }
+    .header-meta {
+      margin-top: 24px;
+      display: inline-flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .header-meta span {
+      font-size: 12px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.2);
+      padding: 5px 14px;
+      border-radius: 20px;
+    }
+
+    /* ─── LAYOUT ─────────────────────────────────────────────── */
+    .page-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ─── TOC ────────────────────────────────────────────────── */
+    .toc {
+      background: var(--dark-bg);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 48px;
+    }
+    .toc h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      color: var(--accent-gold);
+      margin-bottom: 16px;
+      letter-spacing: .5px;
+    }
+    .toc ol {
+      list-style: none;
+      columns: 2;
+      column-gap: 24px;
+    }
+    @media(max-width:560px){ .toc ol { columns: 1; } }
+    .toc li { margin-bottom: 8px; counter-increment: toc; }
+    .toc li::before {
+      content: counter(toc, decimal-leading-zero) ". ";
+      color: var(--accent-gold);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .toc a {
+      color: rgba(255,255,255,.82);
+      text-decoration: none;
+      font-size: 13.5px;
+      transition: color .2s;
+    }
+    .toc a:hover { color: var(--accent-gold); }
+
+    /* ─── INTRO BOX ──────────────────────────────────────────── */
+    .intro-box {
+      border-left: 4px solid var(--primary-color);
+      background: var(--cream-bg);
+      padding: 20px 24px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 48px;
+      font-size: 14.5px;
+      color: var(--text-light);
+    }
+
+    /* ─── SECTIONS ───────────────────────────────────────────── */
+    section {
+      margin-bottom: 44px;
+      scroll-margin-top: 24px;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border-gray);
+    }
+    .section-number {
+      background: var(--dark-blue);
+      color: var(--accent-gold);
+      font-size: 11px;
+      font-weight: 700;
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--dark-blue);
+    }
+
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--primary-color);
+      margin: 22px 0 10px;
+    }
+
+    p { margin-bottom: 12px; color: var(--text-main); font-size: 14.5px; }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+    li { margin-bottom: 5px; font-size: 14.5px; color: var(--text-main); }
+
+    /* ─── CARDS ──────────────────────────────────────────────── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 16px 0;
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gray);
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+    .card-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--primary-color);
+      margin-bottom: 6px;
+    }
+    .card p { font-size: 13.5px; margin: 0; color: var(--text-light); }
+
+    /* ─── HIGHLIGHT BOX ──────────────────────────────────────── */
+    .highlight {
+      background: linear-gradient(135deg, #e0f0ff 0%, #f0f7ff 100%);
+      border: 1px solid #a8d0ef;
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin: 16px 0;
+    }
+    .highlight.warning {
+      background: linear-gradient(135deg, #fffbe6 0%, #fdf8d8 100%);
+      border-color: var(--accent-gold);
+    }
+    .highlight p { margin: 0; font-size: 14px; }
+
+    /* ─── TABLE ──────────────────────────────────────────────── */
+    .table-wrap { overflow-x: auto; margin: 16px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+    thead tr { background: var(--dark-blue); color: var(--white); }
+    thead th { padding: 11px 16px; text-align: left; font-weight: 600; font-size: 12px; letter-spacing: .5px; }
+    tbody tr:nth-child(even) { background: var(--bg-card); }
+    td { padding: 10px 16px; border-bottom: 1px solid var(--border-gray); color: var(--text-dark); }
+    td a { color: var(--primary-color); font-size: 12px; }
+
+    /* ─── TAG LIST ───────────────────────────────────────────── */
+    .tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+    .tag {
+      background: var(--dark-blue);
+      color: #c8e6ff;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    /* ─── RIGHTS GRID ────────────────────────────────────────── */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      margin: 16px 0;
+    }
+    .right-item {
+      background: var(--bg-card);
+      border-left: 3px solid var(--secondary-green);
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+    }
+    .right-item strong { display: block; font-size: 13px; color: var(--dark-blue); margin-bottom: 3px; }
+    .right-item span { font-size: 13px; color: var(--text-light); }
+
+    /* ─── FOOTER ─────────────────────────────────────────────── */
+    footer {
+      background: var(--dark-bg);
+      color: rgba(255,255,255,.7);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+    }
+    footer strong { color: var(--accent-gold); }
+    footer a { color: #93c5fd; text-decoration: none; }
+    footer .footer-links { margin-top: 12px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+
+    /* ─── DIVIDER ────────────────────────────────────────────── */
+    hr { border: none; border-top: 1px solid var(--border-gray); margin: 32px 0; }
+
+    /* ─── CONTACT BOX ────────────────────────────────────────── */
+    .contact-box {
+      background: var(--dark-bg);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 28px 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .contact-box h3 { color: var(--accent-gold); margin: 0; font-size: 16px; text-transform: none; letter-spacing: 0; font-family: 'Playfair Display', serif; }
+    .contact-box p { margin: 0; font-size: 14px; opacity: .8; }
+    .contact-info a { color: #93c5fd; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════ HEADER ══ -->
+<header>
+  <div class="header-badge">Legal Document</div>
+  <h1>Privacy Policy<br><span>Lotto Forecast App</span></h1>
+  <p class="header-sub">Visual Lotto Board</p>
+  <div class="header-meta">
+    <span>📅 Last Updated: March 2026</span>
+    <span>🌐 app.visuallottoboard.com</span>
+    <span>📱 Android &amp; iOS</span>
+  </div>
+</header>
+
+<!-- ════════════════════════════════════ MAIN ════ -->
+<div class="page-wrap">
+
+  <!-- Intro -->
+  <div class="intro-box">
+    <strong>Visual Lotto Board</strong> ("we," "our," or "us") operates the Lotto Forecast App (the "Service"), available via web application (<a href="https://app.visuallottoboard.com">https://app.visuallottoboard.com</a>) and mobile applications for Android and iOS. This Privacy Policy explains how we collect, use, disclose, and protect your information when you use our Service.
+    <br><br>
+    By using the Service, you agree to the collection and use of information in accordance with this Privacy Policy.
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h2>Table of Contents</h2>
+    <ol style="counter-reset: toc;">
+      <li><a href="#s1">Information We Collect</a></li>
+      <li><a href="#s2">How We Use Your Information</a></li>
+      <li><a href="#s3">Data Storage &amp; Security</a></li>
+      <li><a href="#s4">Third-Party Services</a></li>
+      <li><a href="#s5">Push Notifications</a></li>
+      <li><a href="#s6">Data Sharing &amp; Disclosure</a></li>
+      <li><a href="#s7">Your Rights &amp; Choices</a></li>
+      <li><a href="#s8">Children's Privacy</a></li>
+      <li><a href="#s9">International Data Transfers</a></li>
+      <li><a href="#s10">Cookies &amp; Tracking</a></li>
+      <li><a href="#s11">App-Specific Information</a></li>
+      <li><a href="#s12">Policy Changes</a></li>
+    </ol>
+  </div>
+
+  <!-- ── Section 1 ── -->
+  <section id="s1">
+    <div class="section-header">
+      <div class="section-number">01</div>
+      <h2>Information We Collect</h2>
+    </div>
+
+    <h3>Personal Information</h3>
+    <p>When you create an account or use our Service, we may collect:</p>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-title">Account Info</div>
+        <p>Email address, username, display name</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Authentication Data</div>
+        <p>Encrypted password, OAuth tokens (Google, Facebook)</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Subscription Info</div>
+        <p>Payment status, plan type, expiration date</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Profile Info</div>
+        <p>Optional preferences, notification settings</p>
+      </div>
+    </div>
+
+    <h3>Automatically Collected Information</h3>
+    <ul>
+      <li><strong>Device Information:</strong> Device type, operating system, unique device identifiers</li>
+      <li><strong>Usage Data:</strong> Features accessed, time spent on app, interaction patterns</li>
+      <li><strong>Log Data:</strong> IP address, browser type, access times, pages viewed</li>
+      <li><strong>Firebase Analytics:</strong> App performance metrics, crash reports, user engagement statistics</li>
+    </ul>
+
+    <h3>Feature Usage Data</h3>
+    <p>When you interact with features of the Lotto Forecast App, we may record activity related to:</p>
+    <ul>
+      <li><strong>Predictions:</strong> Uploaded forecast content you save or review</li>
+      <li><strong>Game Results:</strong> Baba Ijebu game results you access (covering October 2023 to date)</li>
+      <li><strong>Day Result:</strong> Real-time draw result interactions</li>
+      <li><strong>Counting Weeks &amp; Moving Numbers:</strong> Selections and preferences you configure</li>
+      <li><strong>Track Pattern &amp; Frequent Numbers:</strong> Pattern preferences and tracking history</li>
+      <li><strong>Lotto Classification Chart:</strong> Chart views and interactions</li>
+      <li><strong>Forecast Central Panel:</strong> Usage activity on the large-screen dashboard (accessible on desktop/tablet only)</li>
+      <li><strong>Notification Preferences:</strong> Your push notification and alert settings</li>
+    </ul>
+  </section>
+
+  <!-- ── Section 2 ── -->
+  <section id="s2">
+    <div class="section-header">
+      <div class="section-number">02</div>
+      <h2>How We Use Your Information</h2>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-title">Service Delivery</div>
+        <p>Deliver predictions, real-time day results, game results, pattern tools, counting weeks, moving numbers, frequent numbers, lotto classification charts, and the Forecast Central Panel.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Subscription Management</div>
+        <p>Verify active subscriptions, control access to premium features, and process payments securely via our payment channel.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Service Improvement</div>
+        <p>Analyze feature usage to improve forecasting tools, fix bugs, optimize performance, and plan new features such as the upcoming Green Lotto Dashboard.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Communication</div>
+        <p>Send draw result alerts, subscription renewal notices, service announcements, and respond to support inquiries.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Security</div>
+        <p>Prevent unauthorized access, enforce terms of service, and protect user accounts and stored data.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Section 3 ── -->
+  <section id="s3">
+    <div class="section-header">
+      <div class="section-number">03</div>
+      <h2>Data Storage &amp; Security</h2>
+    </div>
+
+    <h3>Storage Location</h3>
+    <p>All personal user data is stored exclusively within Google Cloud infrastructure. We do not store personal user data on any other third-party server.</p>
+    <ul>
+      <li>User authentication data is stored using <strong>Firebase Authentication</strong> (Google Cloud)</li>
+      <li>Application and subscription data is stored in <strong>Cloud Firestore</strong> (Google Cloud Platform)</li>
+      <li>All data is encrypted in transit (HTTPS/TLS) and at rest</li>
+    </ul>
+
+    <h3>Security Measures</h3>
+    <div class="tag-list">
+      <span class="tag">SSL/TLS Encryption</span>
+      <span class="tag">Bcrypt Password Hashing</span>
+      <span class="tag">Firebase App Check</span>
+      <span class="tag">Regular Security Audits</span>
+      <span class="tag">Access Controls</span>
+    </div>
+
+    <h3>Data Retention</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Account Status</th><th>Retention Period</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Active accounts</td><td>Retained while account is active</td></tr>
+          <tr><td>Inactive accounts</td><td>90 days after last login</td></tr>
+          <tr><td>Deleted accounts</td><td>Personal data permanently deleted within 30 days</td></tr>
+          <tr><td>Anonymized analytics</td><td>May be retained for statistical purposes</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── Section 4 ── -->
+  <section id="s4">
+    <div class="section-header">
+      <div class="section-number">04</div>
+      <h2>Third-Party Services</h2>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Category</th><th>Service</th><th>Data Collected</th><th>Privacy Policy</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Authentication</td>
+            <td>Google Sign-In</td>
+            <td>Email, profile information</td>
+            <td><a href="https://policies.google.com/privacy" target="_blank">View Policy ↗</a></td>
+          </tr>
+          <tr>
+            <td>Authentication</td>
+            <td>Facebook Login</td>
+            <td>Email, profile information</td>
+            <td><a href="https://www.facebook.com/privacy/policy" target="_blank">View Policy ↗</a></td>
+          </tr>
+          <tr>
+            <td>Analytics</td>
+            <td>Firebase Analytics</td>
+            <td>Usage statistics, crash reports</td>
+            <td><a href="https://firebase.google.com/support/privacy" target="_blank">View Policy ↗</a></td>
+          </tr>
+          <tr>
+            <td>Analytics</td>
+            <td>Google Analytics</td>
+            <td>Web traffic analysis</td>
+            <td><a href="https://policies.google.com/privacy" target="_blank">View Policy ↗</a></td>
+          </tr>
+          <tr>
+            <td>Infrastructure</td>
+            <td>Firebase (Google Cloud)</td>
+            <td>Authentication, database, app hosting</td>
+            <td><a href="https://firebase.google.com/support/privacy" target="_blank">View Policy ↗</a></td>
+          </tr>
+          <tr>
+            <td>Payments</td>
+            <td>Payment Processor</td>
+            <td>Subscription payments (card details not stored by us)</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── Section 5 ── -->
+  <section id="s5">
+    <div class="section-header">
+      <div class="section-number">05</div>
+      <h2>Push Notifications</h2>
+    </div>
+    <p>Our Android app may send push notifications for:</p>
+    <ul>
+      <li>New Baba Ijebu draw results (Day Result alerts)</li>
+      <li>Counting Weeks number occurrences</li>
+      <li>Track Pattern and Moving Number updates</li>
+      <li>New prediction uploads</li>
+      <li>Subscription expiration reminders</li>
+    </ul>
+    <div class="highlight">
+      <p>You can disable push notifications at any time through <strong>App Settings → Notifications</strong> or your <strong>Device Settings → App Notifications</strong>.</p>
+    </div>
+  </section>
+
+  <!-- ── Section 6 ── -->
+  <section id="s6">
+    <div class="section-header">
+      <div class="section-number">06</div>
+      <h2>Data Sharing &amp; Disclosure</h2>
+    </div>
+    <div class="highlight warning">
+      <p>🔒 <strong>We DO NOT sell, trade, or rent your personal information to third parties.</strong></p>
+    </div>
+    <p>We may share your information only in these circumstances:</p>
+    <ul>
+      <li><strong>With Your Consent:</strong> When you explicitly authorize sharing</li>
+      <li><strong>Service Providers:</strong> With trusted third parties who assist in operating our Service (Firebase/Google Cloud and our payment processor)</li>
+      <li><strong>Legal Requirements:</strong> To comply with legal obligations, court orders, or government requests</li>
+      <li><strong>Business Transfers:</strong> In connection with merger, acquisition, or sale of assets</li>
+      <li><strong>Protection of Rights:</strong> To protect our rights, property, or safety, or that of our users</li>
+    </ul>
+  </section>
+
+  <!-- ── Section 7 ── -->
+  <section id="s7">
+    <div class="section-header">
+      <div class="section-number">07</div>
+      <h2>Your Rights &amp; Choices</h2>
+    </div>
+    <div class="rights-grid">
+      <div class="right-item">
+        <strong>Access &amp; Portability</strong>
+        <span>Request a copy of your personal data; export saved predictions and preferences.</span>
+      </div>
+      <div class="right-item">
+        <strong>Correction</strong>
+        <span>Update or correct account information; modify notification preferences.</span>
+      </div>
+      <div class="right-item">
+        <strong>Deletion</strong>
+        <span>Delete your account and associated data; request permanent removal of personal information.</span>
+      </div>
+      <div class="right-item">
+        <strong>Data Minimization</strong>
+        <span>Use the Service with minimal data collection; opt-out of analytics tracking.</span>
+      </div>
+    </div>
+    <h3>To Exercise Your Rights</h3>
+    <p>Contact us at: <a href="mailto:privacy@visuallottoboard.com">privacy@visuallottoboard.com</a></p>
+  </section>
+
+  <!-- ── Section 8 ── -->
+  <section id="s8">
+    <div class="section-header">
+      <div class="section-number">08</div>
+      <h2>Children's Privacy</h2>
+    </div>
+    <div class="highlight warning">
+      <p>⚠️ Our Service is <strong>not intended for children under 18 years of age.</strong> We do not knowingly collect personal information from children under 18. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately.</p>
+    </div>
+  </section>
+
+  <!-- ── Section 9 ── -->
+  <section id="s9">
+    <div class="section-header">
+      <div class="section-number">09</div>
+      <h2>International Data Transfers</h2>
+    </div>
+    <p>Your information may be transferred to and maintained on servers located outside your country of residence. By using the Service, you consent to the transfer of your information to countries that may have different data protection rules than your own.</p>
+    <h3>Primary Storage Location</h3>
+    <ul>
+      <li>Google Cloud Platform servers (multi-region deployment)</li>
+    </ul>
+    <p>Google Cloud maintains appropriate data protection safeguards, including compliance with international data transfer frameworks. For more information, see <a href="https://cloud.google.com/privacy" target="_blank">Google Cloud Privacy</a>.</p>
+  </section>
+
+  <!-- ── Section 10 ── -->
+  <section id="s10">
+    <div class="section-header">
+      <div class="section-number">10</div>
+      <h2>Cookies &amp; Tracking Technologies</h2>
+    </div>
+    <p>We use cookies and similar tracking technologies to maintain user sessions, remember user preferences, analyze Service usage, and improve user experience.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-title">Essential Cookies</div>
+        <p>Required for Service functionality</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Analytics Cookies</div>
+        <p>Track usage patterns (Google Analytics)</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Preference Cookies</div>
+        <p>Remember user settings</p>
+      </div>
+    </div>
+    <p>You can control cookies through your browser settings.</p>
+  </section>
+
+  <!-- ── Section 11 ── -->
+  <section id="s11">
+    <div class="section-header">
+      <div class="section-number">11</div>
+      <h2>App-Specific Information</h2>
+    </div>
+
+    <h3>Android Application</h3>
+    <p>The Lotto Forecast App is currently available on Android. The following device permissions may be requested:</p>
+    <ul>
+      <li><strong>Internet Access:</strong> Required to fetch live draw results, predictions, and app data</li>
+      <li><strong>Notifications:</strong> Required to send draw result alerts and subscription reminders</li>
+      <li><strong>Storage:</strong> Used for local data caching to improve app performance</li>
+    </ul>
+    <p>Google Play Services may independently collect device identifiers and app performance metrics in accordance with Google's own privacy policy.</p>
+
+    <h3>Web Application</h3>
+    <p>The Lotto Forecast App is also accessible via web browser at <a href="https://app.visuallottoboard.com" target="_blank">app.visuallottoboard.com</a>. Standard browser cookies and session data are used to maintain your login state and preferences.</p>
+
+    <h3>Forecast Central Panel</h3>
+    <p>The Forecast Central Panel is a dedicated dashboard interface providing an integrated view of the Lotto Classification Chart, Baba Ijebu Game Results, and the current Day Result. This panel is accessible only on large-screen devices (desktop and tablet). No additional personal data is collected through this interface beyond standard usage analytics.</p>
+
+    <h3>Facebook Login</h3>
+    <p>When you sign in with Facebook, we collect your public profile information (name, profile picture), email address, and Facebook user ID solely for authentication purposes. We do not post to your timeline, access your friend list, or use this data for any purpose other than account identification.</p>
+
+    <h3>Compliance</h3>
+    <div class="tag-list">
+      <span class="tag">GDPR</span>
+      <span class="tag">CCPA</span>
+      <span class="tag">Google Play Store</span>
+      <span class="tag">Facebook Platform Policy</span>
+    </div>
+  </section>
+
+  <!-- ── Section 12 ── -->
+  <section id="s12">
+    <div class="section-header">
+      <div class="section-number">12</div>
+      <h2>Changes to This Policy</h2>
+    </div>
+    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by:</p>
+    <ul>
+      <li>Posting the new Privacy Policy on this page</li>
+      <li>Updating the "Last Updated" date</li>
+      <li>Sending an email notification (for material changes)</li>
+    </ul>
+    <p>We encourage you to review this Privacy Policy periodically.</p>
+  </section>
+
+  <hr />
+
+  <!-- Contact -->
+  <div class="contact-box">
+    <div>
+      <h3>Contact Us</h3>
+      <p>Questions or concerns about this Privacy Policy?</p>
+    </div>
+    <div class="contact-info">
+      <p>📧 <a href="mailto:support@visuallottoboard.com">support@visuallottoboard.com</a></p>
+      <p>🌐 <a href="https://visuallottoboard.com/contact">visuallottoboard.com/contact</a></p>
+    </div>
+  </div>
+
+  <div class="highlight" style="margin-top: 28px; text-align: center;">
+    <p><strong>Consent:</strong> By using the Lotto Forecast App, you consent to this Privacy Policy and agree to its terms.</p>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<!-- ════════════════════════════════════ FOOTER ══ -->
+<footer>
+  <p>&copy; 2026 <strong>Visual Lotto Board</strong> </p>
+</footer>

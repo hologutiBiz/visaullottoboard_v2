@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Deletion Instructions | Visual Lotto Board</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #2282c7;
+      --dark-blue: #1a5fa0;
+      --header-gradient-start: #667eea;
+      --secondary-green: #059669;
+      --accent-gold: #f59e0b;
+      --bg-light-gray: #e8eaed;
+      --bg-lighter: #f9fafb;
+      --border-gray: #d0d0d0;
+      --bg-card: #f0f2f5;
+      --dark-bg: #1f2937;
+      --text-dark: #111827;
+      --text-light: #6b7280;
+      --white: #ffffff;
+      --cream-bg: rgba(245,245,220,0.47);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--bg-lighter);
+      color: var(--text-dark);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, var(--header-gradient-start) 0%, var(--primary-color) 55%, var(--dark-blue) 100%);
+      color: var(--white);
+      padding: 56px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 40%, rgba(245,158,11,.2) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .header-badge {
+      display: inline-block;
+      background: var(--accent-gold);
+      color: var(--dark-bg);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 5vw, 40px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    header h1 span { 
+        color: var(--accent-gold); 
+    }
+    .header-sub {
+        color: #e8eaed;
+      font-size: 13px;
+      opacity: .75;
+      margin-top: 6px;
+      letter-spacing: .5px;
+    }
+    .header-meta {
+      margin-top: 24px;
+      display: inline-flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .header-meta span {
+      font-size: 12px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.2);
+      padding: 5px 14px;
+      border-radius: 20px;
+    }
+
+    /* LAYOUT */
+    .page-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* INTRO BOX */
+    .intro-box {
+      border-left: 4px solid var(--primary-color);
+      background: var(--cream-bg);
+      padding: 20px 24px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 40px;
+      font-size: 14.5px;
+      color: var(--text-light);
+    }
+    .intro-box a { color: var(--primary-color); }
+
+    /* SECTION */
+    section {
+      margin-bottom: 40px;
+      scroll-margin-top: 24px;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border-gray);
+    }
+    .section-number {
+      background: var(--dark-blue);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 700;
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--dark-blue);
+    }
+    h3 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--primary-color);
+      margin: 22px 0 10px;
+    }
+    p { margin-bottom: 12px; color: var(--text-dark); font-size: 14.5px; }
+    ul { padding-left: 20px; margin-bottom: 14px; }
+    li { margin-bottom: 6px; font-size: 14.5px; color: var(--text-dark); }
+    a { color: var(--primary-color); }
+
+    /* STEPS */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: var(--bg-card);
+      border: 1px solid var(--border-gray);
+      border-radius: 10px;
+      padding: 16px 20px;
+    }
+    .step-num {
+      background: var(--dark-blue);
+      color: var(--accent-gold);
+      font-size: 13px;
+      font-weight: 700;
+      min-width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .step-content strong {
+      display: block;
+      font-size: 14px;
+      color: var(--dark-blue);
+      margin-bottom: 4px;
+    }
+    .step-content p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--text-light);
+    }
+
+    /* HIGHLIGHT */
+    .highlight {
+      background: linear-gradient(135deg, #e0f0ff 0%, #f0f7ff 100%);
+      border: 1px solid #a8d0ef;
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin: 16px 0;
+    }
+    .highlight.warning {
+      background: linear-gradient(135deg, #fffbe6 0%, #fdf8d8 100%);
+      border-color: var(--accent-gold);
+    }
+    .highlight p { margin: 0; font-size: 14px; }
+
+    /* DATA TABLE */
+    .table-wrap { overflow-x: auto; margin: 16px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+    thead tr { background: var(--dark-blue); color: var(--white); }
+    thead th { padding: 11px 16px; text-align: left; font-weight: 600; font-size: 12px; letter-spacing: .5px; }
+    tbody tr:nth-child(even) { background: var(--bg-card); }
+    td { padding: 10px 16px; border-bottom: 1px solid var(--border-gray); color: var(--text-dark); font-size: 14px; }
+
+    /* DIVIDER */
+    hr { border: none; border-top: 1px solid var(--border-gray); margin: 32px 0; }
+
+    /* CONTACT BOX */
+    .contact-box {
+      background: var(--dark-bg);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 28px 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .contact-box h3 {
+      color: var(--accent-gold);
+      margin: 0;
+      font-size: 16px;
+      text-transform: none;
+      letter-spacing: 0;
+      font-family: 'Playfair Display', serif;
+    }
+    .contact-box p { margin: 4px 0; font-size: 14px; opacity: .85; color: var(--white); }
+    .contact-info a { color: #93c5fd; text-decoration: none; }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark-bg);
+      color: rgba(255,255,255,.7);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+    }
+    footer strong { color: var(--accent-gold); }
+    footer a { color: #93c5fd; text-decoration: none; }
+    .footer-links { margin-top: 12px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+
+    @media(max-width: 560px) {
+      .step { flex-direction: column; gap: 10px; }
+      .contact-box { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <span class="header-badge">Facebook Data Deletion</span>
+  <h1>Data Deletion<br><span>Instructions</span></h1>
+  <p class="header-sub">Lotto Forecast App &mdash; Visual Lotto Board</p>
+  <div class="header-meta">
+    <span>&#128197; Last Updated: March 2026</span>
+    <span>&#127760; app.visuallottoboard.com</span>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="page-wrap">
+
+  <!-- Intro -->
+  <div class="intro-box">
+    This page explains how users who signed in to the <strong>Lotto Forecast App</strong> using their Facebook account can request the deletion of their data from our systems. We are committed to protecting your privacy and will honour all valid deletion requests promptly.
+  </div>
+
+  <!-- Section 1 -->
+  <section id="s1">
+    <div class="section-header">
+      <div class="section-number">01</div>
+      <h2>What Data We Collect via Facebook</h2>
+    </div>
+    <p>When you sign in to the Lotto Forecast App using Facebook Login, we collect only the minimum information required to create and authenticate your account:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>Purpose</th>
+            <th>Stored By</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Email address</td>
+            <td>Account identification and communication</td>
+            <td>Firebase Authentication (Google Cloud)</td>
+          </tr>
+          <tr>
+            <td>Display name</td>
+            <td>Personalizing your in-app experience</td>
+            <td>Cloud Firestore (Google Cloud)</td>
+          </tr>
+          <!-- <tr>
+            <td>Profile picture URL</td>
+            <td>Displaying your avatar within the app</td>
+            <td>Cloud Firestore (Google Cloud)</td>
+          </tr> -->
+          <tr>
+            <td>Facebook User ID</td>
+            <td>Linking your Facebook account to your app account</td>
+            <td>Firebase Authentication (Google Cloud)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="highlight warning">
+      <p>&#128274; We do <strong>not</strong> access your Facebook friends list, post to your timeline, or store any other Facebook data beyond what is listed above.</p>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section id="s2">
+    <div class="section-header">
+      <div class="section-number">02</div>
+      <h2>How to Request Data Deletion</h2>
+    </div>
+    <p>You can request deletion of all data associated with your Facebook-linked account through either of the following methods:</p>
+
+    <h3>Method A &mdash; Delete Your Account In-App</h3>
+    <p>This is the fastest way to remove all your data immediately:</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <strong>Open the Lotto Forecast App</strong>
+          <p>Log in to your account at <a href="https://app.visuallottoboard.com" target="_blank">app.visuallottoboard.com</a> or via the Android app</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <strong>Go to Account Settings</strong>
+          <p>Tap your profile icon and navigate to <strong>Settings &rarr; Account</strong></p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <strong>Select "Delete Account"</strong>
+          <p>Scroll to the bottom and tap <strong>Delete My Account</strong></p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <strong>Confirm Deletion</strong>
+          <p>Confirm your request. Your account and all associated data will be permanently deleted within <strong>30 days</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <h3>Method B &mdash; Submit a Deletion Request by Email</h3>
+    <p>If you are unable to access the app, you can request deletion by contacting us directly:</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <strong>Send an email to our privacy team</strong>
+          <p>Email: <a href="mailto:support@visuallottoboard.com">support&#64;visuallottoboard.com</a></p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <strong>Use the subject line</strong>
+          <p>"Facebook Data Deletion Request &mdash; [Your Registered Email Address]"</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <strong>Include in your message</strong>
+          <p>Your registered email address and a brief confirmation that you wish to have all your data permanently deleted</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <strong>We will process your request</strong>
+          <p>We will confirm receipt within <strong>48 hours</strong> and complete deletion within <strong>30 days</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <h3>Method C &mdash; Remove App Access from Facebook</h3>
+    <p>You can also revoke our app's access to your Facebook account directly through Facebook:</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <strong>Go to your Facebook Settings</strong>
+          <p>Visit <a href="https://www.facebook.com/settings?tab=applications" target="_blank">facebook.com/settings &rarr; Apps and Websites</a></p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <strong>Find "Visual Lotto Board" or "Lotto Forecast App"</strong>
+          <p>Locate our app in your connected apps list</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <strong>Click "Remove" and check "Delete posts"</strong>
+          <p>This revokes our access. To ensure full data deletion from our servers, also send us an email using Method B above</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section id="s3">
+    <div class="section-header">
+      <div class="section-number">03</div>
+      <h2>What Happens After Deletion</h2>
+    </div>
+    <p>Once your deletion request is processed:</p>
+    <ul>
+      <li>Your account credentials and profile data will be <strong>permanently removed</strong> from Firebase Authentication and Cloud Firestore</li>
+      <li>Your saved preferences, subscription records, and usage history will be <strong>deleted</strong></li>
+      <li>Anonymized, non-identifiable analytics data may be retained for statistical improvement purposes only</li>
+      <li>You will <strong>lose access</strong> to the Lotto Forecast App and any active subscription — no refunds are issued for the remaining subscription period</li>
+      <li>Deletion is <strong>irreversible</strong>. You will need to create a new account if you wish to use the Service again</li>
+    </ul>
+    <div class="highlight">
+      <p>&#128338; All personal data will be fully deleted within <strong>30 days</strong> of a confirmed request. You will receive an email confirmation once the deletion is complete.</p>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- Contact Box -->
+  <div class="contact-box">
+    <div>
+      <h3>Need Help?</h3>
+      <p>Our privacy team is here to assist you.</p>
+    </div>
+    <div class="contact-info">
+      <p>&#128231; <a href="mailto:support@visuallottoboard.com">support&#64;visuallottoboard.com</a></p>
+      <p>&#127760; <a href="https://visuallottoboard.com/contact" target="_blank">visuallottoboard.com/contact</a></p>
+      <p>&#128196; <a href="../policies-center.html" target="_blank">View Full Privacy Policy</a></p>
+    </div>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 <strong>Visual Lotto Board</strong>. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="https://visuallottoboard.com">Home</a>
+    <a href="https://app.visuallottoboard.com">Lotto Forecast App</a>
+    <a href="../policies-center.html">Privacy Policy</a>
+    <!-- <a href="mailto:support@visuallottoboard.com">Privacy Contact</a> -->
+  </div>
+</footer>
+
+</body>
+</html>

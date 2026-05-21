@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — Green Lotto Results | Visual Lotto Board</title>
+    <meta name="description" content="Privacy Policy for Green Lotto Results web platform and Android app by Visual Lotto Board." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --vlb-blue: #2282c7;
+            --vlb-blue-dark: #1a6aa8;
+            --green-primary: #2e7d32;
+            --green-light: #e8f5e9;
+            --amber: #f59e0b;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --text-primary: #1a2332;
+            --text-secondary: #52647a;
+            --text-hint: #94a3b8;
+            --divider: #e2e8f0;
+            --radius: 12px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* ── HEADER ─────────────────────────────────────────────── */
+        .site-header {
+            background: var(--vlb-blue);
+            padding: 0 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(34, 130, 199, 0.25);
+        }
+
+        .header-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .brand-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--amber);
+        }
+
+        .brand-name {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            color: #fff;
+            letter-spacing: 0.02em;
+        }
+
+        .brand-sub {
+            font-size: 12px;
+            color: rgba(255,255,255,0.7);
+            font-weight: 300;
+        }
+
+        .header-badge {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 20px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        /* ── HERO ───────────────────────────────────────────────── */
+        .hero {
+            background: linear-gradient(135deg, var(--vlb-blue) 0%, var(--vlb-blue-dark) 50%, #0f4c75 100%);
+            padding: 72px 24px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -60px; right: -60px;
+            width: 320px; height: 320px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.04);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -80px; left: 10%;
+            width: 200px; height: 200px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.03);
+        }
+
+        .hero-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: rgba(255,255,255,0.9);
+            font-size: 12px;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 20px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero-label::before {
+            content: '';
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--amber);
+        }
+
+        .hero h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            color: #fff;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+
+        .hero-meta-item {
+            color: rgba(255,255,255,0.7);
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero-meta-item strong {
+            color: rgba(255,255,255,0.95);
+            font-weight: 500;
+        }
+
+        .hero-meta-sep { color: rgba(255,255,255,0.25); }
+
+        /* ── LAYOUT ─────────────────────────────────────────────── */
+        .page-layout {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+            display: grid;
+            grid-template-columns: 1fr 240px;
+            gap: 48px;
+            align-items: start;
+        }
+
+        /* ── TOC SIDEBAR ─────────────────────────────────────────── */
+        .toc {
+            position: sticky;
+            top: 80px;
+            background: var(--surface);
+            border: 1px solid var(--divider);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-top: 48px;
+        }
+
+        .toc-title {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-hint);
+            margin-bottom: 16px;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .toc-list a {
+            display: block;
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 6px;
+            transition: all 0.15s;
+            line-height: 1.4;
+        }
+
+        .toc-list a:hover {
+            background: var(--green-light);
+            color: var(--green-primary);
+        }
+
+        /* ── CONTENT ────────────────────────────────────────────── */
+        .content {
+            padding-top: 48px;
+        }
+
+        .intro-box {
+            background: var(--green-light);
+            border-left: 4px solid var(--green-primary);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            padding: 20px 24px;
+            margin-bottom: 48px;
+        }
+
+        .intro-box p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .intro-box strong { color: var(--green-primary); }
+
+        /* Section */
+        .section {
+            margin-bottom: 56px;
+            scroll-margin-top: 80px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--divider);
+        }
+
+        .section-num {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--vlb-blue);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .section h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            font-weight: 400;
+        }
+
+        .section p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            line-height: 1.75;
+        }
+
+        .section p:last-child { margin-bottom: 0; }
+
+        .section h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 24px 0 10px;
+            letter-spacing: 0.02em;
+        }
+
+        /* Lists */
+        .section ul, .section ol {
+            padding-left: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .section ul li, .section ol li {
+            font-size: 15px;
+            color: var(--text-secondary);
+            padding-left: 24px;
+            position: relative;
+            line-height: 1.65;
+        }
+
+        .section ul li::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 10px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--green-primary);
+        }
+
+        .section ol {
+            counter-reset: item;
+        }
+
+        .section ol li {
+            counter-increment: item;
+        }
+
+        .section ol li::before {
+            content: counter(item) ".";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--vlb-blue);
+        }
+
+        /* Info cards */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .info-card {
+            background: var(--surface);
+            border: 1px solid var(--divider);
+            border-radius: var(--radius);
+            padding: 16px 18px;
+        }
+
+        .info-card-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-hint);
+            margin-bottom: 6px;
+        }
+
+        .info-card-value {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        /* Platform badges */
+        .platform-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-right: 6px;
+            margin-bottom: 4px;
+        }
+
+        .tag-web {
+            background: #e8f4fd;
+            color: var(--vlb-blue);
+        }
+
+        .tag-app {
+            background: var(--green-light);
+            color: var(--green-primary);
+        }
+
+        .tag-both {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        /* Table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--divider);
+        }
+
+        .data-table thead tr {
+            background: var(--vlb-blue);
+            color: #fff;
+        }
+
+        .data-table th {
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 500;
+            font-size: 12px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .data-table td {
+            padding: 12px 16px;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--divider);
+            vertical-align: top;
+        }
+
+        .data-table tbody tr:last-child td { border-bottom: none; }
+        .data-table tbody tr:nth-child(even) td { background: var(--bg); }
+
+        /* Highlight box */
+        .highlight-box {
+            background: #fef3c7;
+            border: 1px solid #fcd34d;
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #78350f;
+            line-height: 1.65;
+        }
+
+        .highlight-box strong { color: #92400e; }
+
+        /* Contact card */
+        .contact-card {
+            background: linear-gradient(135deg, var(--vlb-blue), var(--vlb-blue-dark));
+            border-radius: var(--radius);
+            padding: 28px 32px;
+            margin-top: 20px;
+        }
+
+        .contact-card p {
+            color: rgba(255,255,255,0.85) !important;
+            margin-bottom: 12px !important;
+        }
+
+        .contact-card a {
+            color: #fff;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.4);
+            transition: border-color 0.15s;
+        }
+
+        .contact-card a:hover { border-color: #fff; }
+
+        /* ── FOOTER ─────────────────────────────────────────────── */
+        .site-footer {
+            background: var(--text-primary);
+            padding: 32px 24px;
+            text-align: center;
+        }
+
+        .site-footer p {
+            color: rgba(255,255,255,0.45);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .site-footer a {
+            color: rgba(255,255,255,0.65);
+            text-decoration: none;
+        }
+
+        .site-footer a:hover { color: #fff; }
+
+        /* ── RESPONSIVE ──────────────────────────────────────────── */
+        @media (max-width: 720px) {
+            .page-layout {
+                grid-template-columns: 1fr;
+                gap: 0;
+                padding: 0 16px 60px;
+            }
+
+            .toc { display: none; }
+
+            .hero { padding: 48px 16px 56px; }
+
+            .info-grid { grid-template-columns: 1fr; }
+
+            .hero h1 { font-size: 1.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="https://green-lotto-result.visuallottoboard.com" class="brand">
+                <div class="brand-dot"></div>
+                <div>
+                    <div class="brand-name">Visual Lotto Board</div>
+                    <div class="brand-sub">Green Lotto Results</div>
+                </div>
+            </a>
+            <span class="header-badge">Privacy Policy</span>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-label">Legal Document</div>
+            <h1>Privacy Policy</h1>
+            <div class="hero-meta">
+                <span class="hero-meta-item">Covers <strong>Website &amp; Android App</strong></span>
+                <span class="hero-meta-sep">·</span>
+                <span class="hero-meta-item">Effective <strong>January 1, 2026</strong></span>
+                <span class="hero-meta-sep">·</span>
+                <span class="hero-meta-item">Last updated <strong>April 2026</strong></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN -->
+    <div class="page-layout">
+
+        <!-- CONTENT -->
+        <main class="content">
+
+            <div class="intro-box">
+                <p>
+                    This Privacy Policy applies to the <strong>Green Lotto Results</strong> website
+                    (<strong>green-lotto-result.visuallottoboard.com</strong>) and the
+                    <strong>Green Lotto Results Android application</strong>, both operated by
+                    <strong>Visual Lotto Board</strong>. We are committed to being transparent about
+                    how we handle your information. Please read this policy carefully.
+                </p>
+            </div>
+
+            <!-- 1. Who We Are -->
+            <section class="section" id="s1">
+                <div class="section-header">
+                    <div class="section-num">1</div>
+                    <h2>Who We Are</h2>
+                </div>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-card-label">Operator</div>
+                        <div class="info-card-value">Visual Lotto Board</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-label">Website</div>
+                        <div class="info-card-value">green-lotto-result.visuallottoboard.com</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-label">Android App</div>
+                        <div class="info-card-value">Green Lotto Results by Visual Lotto Board</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-label">Contact</div>
+                        <div class="info-card-value">visuallottoboard.com/contact</div>
+                    </div>
+                </div>
+                <p>
+                    Visual Lotto Board is the data controller responsible for the personal information
+                    collected through our platforms. We provide a results-checking service for Green
+                    Lotto games and do not operate, affiliate with, or represent the Green Lotto
+                    organisation itself.
+                </p>
+            </section>
+
+            <!-- 2. Scope -->
+            <section class="section" id="s2">
+                <div class="section-header">
+                    <div class="section-num">2</div>
+                    <h2>What This Policy Covers</h2>
+                </div>
+                <p>This policy covers both platforms:</p>
+                <ul>
+                    <li>
+                        <span class="platform-tag tag-web">Website</span>
+                        green-lotto-result.visuallottoboard.com — accessed via any web browser
+                    </li>
+                    <li>
+                        <span class="platform-tag tag-app">Android App</span>
+                        Green Lotto Results by Visual Lotto Board — available on Google Play Store
+                    </li>
+                </ul>
+                <p>
+                    Where a section applies to only one platform, it is marked with the relevant badge.
+                    Where no badge is shown, the section applies to both platforms.
+                </p>
+            </section>
+
+            <!-- 3. Data We Collect -->
+            <section class="section" id="s3">
+                <div class="section-header">
+                    <div class="section-num">3</div>
+                    <h2>Information We Collect</h2>
+                </div>
+                <p>
+                    Neither the website nor the Android app requires you to create an account or log in.
+                    We do <strong>NOT</strong> collect your name, email address, phone number, or any identifying
+                    information directly. However, certain information is collected automatically
+                    through the third-party services we use.
+                </p>
+
+                <h3>3.1 Automatically Collected Information</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Data Type</th>
+                            <th>Platform</th>
+                            <th>Collected By</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pages visited, session duration, scroll depth</td>
+                            <td><span class="platform-tag tag-web">Website</span></td>
+                            <td>Google Analytics</td>
+                            <td>Understand how users use the site</td>
+                        </tr>
+                        <tr>
+                            <td>Device type, browser, operating system</td>
+                            <td><span class="platform-tag tag-web">Website</span></td>
+                            <td>Google Analytics</td>
+                            <td>Improve compatibility and performance</td>
+                        </tr>
+                        <tr>
+                            <td>Approximate geographic location (country, city)</td>
+                            <td><span class="platform-tag tag-both">Both</span></td>
+                            <td>Google Analytics / Firebase Analytics</td>
+                            <td>Understand our audience geography</td>
+                        </tr>
+                        <tr>
+                            <td>Referring source (e.g. Google Search, direct)</td>
+                            <td><span class="platform-tag tag-web">Website</span></td>
+                            <td>Google Analytics</td>
+                            <td>Measure marketing effectiveness</td>
+                        </tr>
+                        <tr>
+                            <td>App screens visited, events, session duration</td>
+                            <td><span class="platform-tag tag-app">Android App</span></td>
+                            <td>Firebase Analytics</td>
+                            <td>Understand how users navigate the app</td>
+                        </tr>
+                        <tr>
+                            <td>Device model, Android version, app version</td>
+                            <td><span class="platform-tag tag-app">Android App</span></td>
+                            <td>Firebase Analytics</td>
+                            <td>Monitor crashes and improve performance</td>
+                        </tr>
+                        <tr>
+                            <td>Advertising ID (GAID)</td>
+                            <td><span class="platform-tag tag-app">Android App</span></td>
+                            <td>Google AdMob</td>
+                            <td>Serve relevant ads and measure ad performance</td>
+                        </tr>
+                        <tr>
+                            <td>IP address (anonymised)</td>
+                            <td><span class="platform-tag tag-both">Both</span></td>
+                            <td>Google Analytics / Firebase</td>
+                            <td>Approximate location detection</td>
+                        </tr>
+                        <tr>
+                            <td>Cookies and similar identifiers</td>
+                            <td><span class="platform-tag tag-web">Website</span></td>
+                            <td>Google Analytics, Google AdSense</td>
+                            <td>Analytics and ad personalisation</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>3.2 Newsletter Subscribers</h3>
+                <p>
+                    <span class="platform-tag tag-web">Website</span>
+                    If you voluntarily subscribe to our newsletter via the Visual Lotto Board website,
+                    your email address is collected and stored in our database solely to send you
+                    product updates and announcements. This is entirely optional. You can unsubscribe
+                    at any time via the link in any email we send.
+                </p>
+
+                <h3>3.3 What We Do NOT Collect</h3>
+                <ul>
+                    <li>Your name, phone number, or address</li>
+                    <li>Payment information of any kind</li>
+                    <li>Lottery tickets, bets, or gambling activity</li>
+                    <li>Precise GPS or real-time location</li>
+                    <li>Contacts, photos, files, or any device content</li>
+                    <li>Microphone or camera data</li>
+                </ul>
+            </section>
+
+            <!-- 4. How We Use Information -->
+            <section class="section" id="s4">
+                <div class="section-header">
+                    <div class="section-num">4</div>
+                    <h2>How We Use Your Information</h2>
+                </div>
+                <p>We use the automatically collected information for the following purposes:</p>
+                <ul>
+                    <li>To understand how users interact with our platforms and improve the user experience</li>
+                    <li>To monitor performance, identify errors, and fix bugs</li>
+                    <li>To understand our audience's geography and tailor content appropriately</li>
+                    <li>To measure the effectiveness of our presence on Google Search</li>
+                    <li>To display relevant advertisements through Google AdSense (website) and Google AdMob (Android app)</li>
+                    <li>To send product update emails to newsletter subscribers (website only, opt-in)</li>
+                </ul>
+                <p>
+                    We do not use your information to make automated decisions that affect you, nor do
+                    we use it for profiling beyond what the third-party analytics services described in
+                    this policy perform on our behalf.
+                </p>
+            </section>
+
+            <!-- 5. Third Parties -->
+            <section class="section" id="s5">
+                <div class="section-header">
+                    <div class="section-num">5</div>
+                    <h2>Third-Party Services</h2>
+                </div>
+                <p>
+                    We use the following third-party services. Each has its own privacy policy which
+                    governs how they handle data on our behalf. We encourage you to review their
+                    policies directly.
+                </p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Platform</th>
+                            <th>Purpose</th>
+                            <th>Privacy Policy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Google Analytics</td>
+                            <td><span class="platform-tag tag-web">Website</span></td>
+                            <td>Website usage analytics</td>
+                            <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+                        </tr>
+                        <tr>
+                            <td>Google AdSense</td>
+                            <td><span class="platform-tag tag-web">Website</span></td>
+                            <td>Display advertising</td>
+                            <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+                        </tr>
+                        <tr>
+                            <td>Firebase Analytics</td>
+                            <td><span class="platform-tag tag-app">Android App</span></td>
+                            <td>App usage analytics</td>
+                            <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></td>
+                        </tr>
+                        <tr>
+                            <td>Google AdMob</td>
+                            <td><span class="platform-tag tag-app">Android App</span></td>
+                            <td>In-app advertising</td>
+                            <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+                        </tr>
+                        <tr>
+                            <td>Supabase</td>
+                            <td><span class="platform-tag tag-both">Both</span></td>
+                            <td>Database hosting for lottery results</td>
+                            <td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></td>
+                        </tr>
+                        <tr>
+                            <td>Cloudinary</td>
+                            <td><span class="platform-tag tag-both">Both</span></td>
+                            <td>Image and asset hosting</td>
+                            <td><a href="https://cloudinary.com/privacy" target="_blank" rel="noopener">cloudinary.com/privacy</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    We do not sell, rent, or trade your information to any third parties for their own
+                    marketing purposes.
+                </p>
+            </section>
+
+            <!-- 6. Cookies -->
+            <section class="section" id="s6">
+                <div class="section-header">
+                    <div class="section-num">6</div>
+                    <h2>Cookies</h2>
+                </div>
+                <p>
+                    <span class="platform-tag tag-web">Website</span>
+                    The Green Lotto Results website uses cookies — small text files stored on your
+                    device — to enable analytics and advertising functionality.
+                </p>
+                <h3>Cookies We Use</h3>
+                <ul>
+                    <li><strong>Analytics cookies</strong> (Google Analytics) — track page visits, session duration, and user behaviour to help us improve the website</li>
+                    <li><strong>Advertising cookies</strong> (Google AdSense) — used to serve relevant advertisements and measure their performance</li>
+                </ul>
+                <p>
+                    You can control cookies through your browser settings. Most browsers allow you to
+                    block or delete cookies. Note that disabling cookies may affect the functionality
+                    of some features. You can also opt out of Google's use of cookies for advertising
+                    by visiting <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>.
+                </p>
+                <div class="highlight-box">
+                    <strong>Android App:</strong> The Android app does not use browser cookies.
+                    Instead, Firebase Analytics and Google AdMob use the Android Advertising ID (GAID)
+                    for analytics and ad personalisation. You can reset or opt out of ad personalisation
+                    in your Android device settings under <strong>Settings → Privacy → Ads</strong>.
+                </div>
+            </section>
+
+            <!-- 7. Data Retention -->
+            <section class="section" id="s7">
+                <div class="section-header">
+                    <div class="section-num">7</div>
+                    <h2>Data Retention</h2>
+                </div>
+                <p>
+                    We retain analytics data in Google Analytics and Firebase Analytics for
+                    <strong>14 months</strong> by default, after which it is automatically deleted by
+                    Google. Newsletter subscriber email addresses are retained for as long as you
+                    remain subscribed. Upon unsubscription, your email address is removed from our
+                    mailing list within 30 days.
+                </p>
+                <p>
+                    We do not store any personally identifiable information on our own servers beyond
+                    newsletter email addresses. Lottery result data stored in our Supabase database
+                    contains no personal information.
+                </p>
+            </section>
+
+            <!-- 8. Your Rights -->
+            <section class="section" id="s8">
+                <div class="section-header">
+                    <div class="section-num">8</div>
+                    <h2>Your Rights</h2>
+                </div>
+                <p>
+                    Depending on your location, you may have the following rights regarding your
+                    personal information:
+                </p>
+                <ul>
+                    <li><strong>Right to access</strong> — request a copy of the personal data we hold about you</li>
+                    <li><strong>Right to deletion</strong> — request that we delete your personal data</li>
+                    <li><strong>Right to object</strong> — object to the processing of your data for analytics or advertising</li>
+                    <li><strong>Right to opt out of personalised ads</strong> — via Google's ad settings or your Android device settings</li>
+                    <li><strong>Right to unsubscribe</strong> — from our newsletter at any time via the unsubscribe link in our emails</li>
+                </ul>
+                <p>
+                    To exercise any of these rights, please contact us via the details in Section 11.
+                    We will respond within 30 days. Note that since we collect very limited personal
+                    data directly, most requests will be directed to the relevant third-party service
+                    (e.g. Google Analytics, AdSense, AdMob).
+                </p>
+            </section>
+
+            <!-- 9. Children -->
+            <section class="section" id="s9">
+                <div class="section-header">
+                    <div class="section-num">9</div>
+                    <h2>Children's Privacy</h2>
+                </div>
+                <p>
+                    Green Lotto Results is not directed at children under the age of 13. We do not
+                    knowingly collect personal information from children. If you believe a child has
+                    provided us with personal information, please contact us and we will take
+                    immediate steps to delete that information.
+                </p>
+            </section>
+
+            <!-- 10. Changes -->
+            <section class="section" id="s10">
+                <div class="section-header">
+                    <div class="section-num">10</div>
+                    <h2>Changes to This Policy</h2>
+                </div>
+                <p>
+                    We may update this Privacy Policy from time to time to reflect changes in our
+                    practices, services, or legal requirements. When we make changes, we will update
+                    the "Last updated" date at the top of this page. We encourage you to review this
+                    policy periodically.
+                </p>
+                <p>
+                    Continued use of the website or Android app after changes are posted constitutes
+                    your acceptance of the updated policy.
+                </p>
+            </section>
+
+            <!-- 11. Contact -->
+            <section class="section" id="s11">
+                <div class="section-header">
+                    <div class="section-num">11</div>
+                    <h2>Contact Us</h2>
+                </div>
+                <p>
+                    If you have any questions, concerns, or requests regarding this Privacy Policy or
+                    how we handle your data, please contact us:
+                </p>
+                <div class="contact-card">
+                    <p><strong style="color:#fff;">Visual Lotto Board</strong></p>
+                    <p>Website: <a href="https://visuallottoboard.com/contact">visuallottoboard.com/contact</a></p>
+                    <p>Green Lotto Results: <a href="https://green-lotto-result.visuallottoboard.com">green-lotto-result.visuallottoboard.com</a></p>
+                    <p style="margin-top:16px; font-size:13px;">We aim to respond to all privacy-related enquiries within 30 days.</p>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- TOC SIDEBAR -->
+        <aside>
+            <nav class="toc">
+                <div class="toc-title">Contents</div>
+                <ul class="toc-list">
+                    <li><a href="#s1">1. Who We Are</a></li>
+                    <li><a href="#s2">2. What This Covers</a></li>
+                    <li><a href="#s3">3. Information We Collect</a></li>
+                    <li><a href="#s4">4. How We Use It</a></li>
+                    <li><a href="#s5">5. Third-Party Services</a></li>
+                    <li><a href="#s6">6. Cookies</a></li>
+                    <li><a href="#s7">7. Data Retention</a></li>
+                    <li><a href="#s8">8. Your Rights</a></li>
+                    <li><a href="#s9">9. Children's Privacy</a></li>
+                    <li><a href="#s10">10. Changes to Policy</a></li>
+                    <li><a href="#s11">11. Contact Us</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>
+            &copy; 2026 Visual Lotto Board. All rights reserved.<br />
+            <a href="https://green-lotto-result.visuallottoboard.com">Green Lotto Results</a>
+            &nbsp;·&nbsp;
+            <a href="https://visuallottoboard.com">Visual Lotto Board</a>
+        </p>
+    </footer>
+
+</body>
+</html>

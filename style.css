@@ -111,15 +111,8 @@ nav input:checked ~ .hamburger:after {
 nav input:checked ~ ul {
    right: 0;
    z-index: 100;
-   
-   /* box-shadow: -20px 0 40px var(--secondary-color); */
 }
-/* nav input:checked ~ body {
-   width: 100vw;
-   height: 100vh;
-   background-color: #a52a2a;
-} */
-/* || Hamburger menu end ||*/
+
 
 ul {
    display: flex;
@@ -156,14 +149,6 @@ ul {
    margin: 10px auto;
 } 
 
-/* >>> Comment out web app static element<<< */
-/* .wep-app-wrap {
-   padding: 10px 0;
-   margin: 2rem auto auto;
-   background-image: url("https://res.cloudinary.com/ddatfadov/image/upload/v1749682783/image_8_vqs1vo.jpg");
-   background-repeat: no-repeat;
-   background-position-y: 40%;
-} */
 
 /*....section: features ...*/
 .section-features {

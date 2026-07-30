@@ -1,0 +1,15 @@
+<div style="background: var(--surface-1); border-radius: 16px; padding: 12px; max-width: 340px; margin: 0 auto;">
+<h2 class="sr-only">Live demo of the sticky bottom banner with a subtle pulse animation drawing attention to the Megapot ad</h2>
+<div style="background: var(--surface-2); border-radius: 12px; border: 0.5px solid var(--border); padding: 40px 12px 12px; position: relative;">
+<p style="text-align: center; font-size: 13px; color: var(--text-secondary); margin: 0 0 12px;">Page content scrolls here</p>
+<div style="background: #000; border-radius: 10px; padding: 8px 30px; display: flex; align-items: center; justify-content: center; position: relative;">
+<img src="https://i.imgur.com/8Q0Q0Q0.png" style="display:none;">
+<div id="pulseBox" style="background: linear-gradient(135deg, #4a5fd4, #6b7fe0); width: 100%; max-width: 260px; height: 44px; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 12px; font-weight: 500;">Megapot &middot; play to win &#8358;300M</div>
+<button style="position: absolute; right: 6px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.15); border: none; color: #fff; font-size: 11px; width: 22px; height: 22px; border-radius: 50%;" aria-label="Close ad">&times;</button>
+</div>
+</div>
+</div>
+<style>
+#pulseBox { animation: stickyPulse 2.5s ease-in-out infinite; }
+@keyframes stickyPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+</style>

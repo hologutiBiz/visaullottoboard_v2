@@ -16,6 +16,7 @@
 
       <meta property="og:title" content="Visual Lotto Board Landing Page">
       <meta property="og:description" content="Digital board for Premier Lotto Baba Ijebu results, Ghana results and lotto classification chart">
+      <!-- <meta property="og:image" content="https://i.postimg.cc/Dy4xvhtg/Visual-Lotto-Board-preview-1.png"> -->
       <meta property="og:image:alt" content="Visual Lotto Baord logo, name and picture of game available on the webpage">
       <meta  property="og:url" content="https://visuallottoboard.com/">
 
@@ -24,6 +25,7 @@
       <meta name="twitter:site" content="@VisuaLottoBoard">
       <meta name="twitter:title" content="Visual Lotto Board Landing Page">
       <meta name="twitter:description" content="Digital board for Premier Lotto Baba Ijebu results, Ghana results and lotto classification chart">
+      <!-- <meta name="twitter:image" content="https://i.postimg.cc/Dy4xvhtg/Visual-Lotto-Board-preview-1.png"> -->
       <meta name="twitter:url" content="https://visuallottoboard.com/">
 
       <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -32,6 +34,7 @@
       <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
       <link rel="manifest" href="site.webmanifest">
     
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,6 +42,7 @@
       <link rel="stylesheet" href="style.css">
       <link rel="stylesheet" href="/carousel/caro-styles.css">
       <link rel="stylesheet" href="megapot.css">
+      <!-- <link rel="stylesheet" href="responsive.css"> -->
 
       <style>
         /* Container & Section Setup */
@@ -71,6 +75,7 @@
             color: #1a1a1a;
         }
 
+/* Card Layout */
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -90,6 +95,7 @@
     text-align: center;
 }
 
+/* Make the Results Portal stand out */
 .agency-card.highlight {
     border: 2px solid #28a745;
     box-shadow: 0 10px 30px rgba(40, 167, 69, 0.1);
@@ -102,6 +108,7 @@
 }
 .card-icon img {
     width: 7rem;
+    /* margin-bottom: 20px; */
 }
 
 .agency-card h3 {
@@ -116,6 +123,7 @@
     margin-bottom: 25px;
 }
 
+/* Links & Buttons */
 .text-link {
     color: #28a745;
     font-weight: 700;
@@ -139,6 +147,7 @@
     font-weight: 600;
 }
 
+/* Bottom CTA Box */
 .cta-box {
     background: #111;
     color: white;
@@ -168,6 +177,29 @@
     transform: scale(1.05);
     background: #218838;
 }
+
+/* Mobile Responsiveness */
+/* @media (max-width: 768px) {
+    .content-header h2 { font-size: 1.8rem; }
+    .card-container { grid-template-columns: 1fr; }
+}
+
+.megapot-banner .megapot-link {
+  background-color: #004aad;
+  color: #fff;
+  border: 2px solid #ffd700; 
+}
+.megapot-banner h2 {
+  color: #ffd700; 
+}
+.megapot-banner p {
+  color: #ffffff;
+}
+
+.megapot-wrapper {
+  height: 100%;
+} */
+
       </style>
      
     </head>
@@ -205,13 +237,20 @@
 
       <main>
         <div class="main-heading">
-          <h1 class="h1">Visual Lotto Board  – <span style="font-weight: 300;">Your Lotto Companion</span> </h1>
+          <h1 class="h1">Visual Lotto Board  – <span style="font-weight: 300;">Your Lotto Lucky Charm!</span> </h1>
           <p>Instant access to Nigeria’s most popular lotto games.</p>
         </div>
 
+        <!-- >>> Comment out web app static element<<< -->
+        <!-- <div class="wep-app-wrap">
+          <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1749671156/wep-app_screenshot_iuayzq.jpg" alt="" width="1000">
+        </div> -->
+      
       <div class="carousel-container">
+        <!-- Navigation Buttons -->
         <button class="nav-btn left" onclick="scrollCarousel(-1)">‹</button>
 
+        <!-- Carousel Content -->
         <div class="lotto-carousel" id="lottoCarousel">
           <!-- Megapot Banner Slide -->
             <div class="carousel-slide megapot-wrapper">
@@ -220,15 +259,28 @@
                 <div class="slide-content">
                     <h2 style="color:#fff">Megapot</h2>
                     <p>Huge MegaPot jackpot — join now and win!</p>
-                    <a class="carousel-btn megapot-btn" href="https://megapot.io/?utm_source=visuallotto&ref=NFHHTA" target="_blank" rel="noopener sponsored" aria-label="Megapot - Play the Internet Lottery" id="megapot-link-carousel" data-banner-position="carousel">
+                    <a class="carousel-btn megapot-btn" href="https://megapot.io/?utm_source=visuallotto&ref=NFHHTA" target="_blank" rel="noopener sponsored" aria-label="Megapot - Play the Internet Lottery" id="megapot-link-teaser" data-banner-position="header_teaser">
                         Play online
                     </a>
                 </div>
             </div>
 
+            <!-- <div class="carousel-item">
+  <img src="assets/slide-1.jpg" class="d-block w-100" alt="Slide">
+  <div class="megapot-wrapper">
+    <img src="assets/megapot-thumb.png" alt="MegaPot">
+    <div class="megapot-content">
+      <p>Huge MegaPot jackpot — join now and win!</p>
+    </div>
+    <a href="/megapot" class="megapot-btn">Play</a>
+  </div>
+</div> -->
+
+
           <!-- Slide 1 -->
           <div class="carousel-slide">
             <div class="carousel-overlay"></div>
+            <!-- <img class="img" src="https://res.cloudinary.com/ddatfadov/image/upload/v1784390557/LottoForecastApp-web_babaijebu-game-results-UI_k8qhd8.png" alt="Lotto Forecast Web App"> -->
              <img src="/assets/LottoForecastApp-web_babaijebu-game-results-UI-edit.png" alt="">
             <div class="slide-content">
               <h2>Lotto Forecast Web App</h2>
@@ -236,6 +288,50 @@
               <a href="https://lottoforecast.visuallottoboard.com" class="carousel-btn" target="_blank">Sign In / Access App</a>
             </div>
           </div>
+
+          <!-- Slide 2 -->
+          <!-- <div class="carousel-slide green-lotto-slide">
+            <div class="carousel-overlay"></div>
+            <img src="Green-Lotto_terminal.jpg" alt="Green Lotto Terminal Offer">
+            <div class="slide-content">
+              <h2>Become Lotto Agent Today</h2>
+              <p>Get a <span class="caro-green-lotto-span">Green Lotto</span> Terminal with full support. Limited slots available!</p>
+              <a href="/contact.html" class="carousel-btn">Apply Now</a>
+            </div>
+          </div> -->
+<!-- 
+          <div class="carousel-slide result-page">
+            <div class="carousel-overlay"></div>
+            <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1751113131/vlb-v2-free-user-cover_fsl1sl.png" alt="Visit results page" class="carousel-image" />
+            <div class="slide-content carousel-caption">
+              <h2>Explore the results page for free</h2>
+              <p>Track results in real time.</p>
+              <a href="https://premier-lotto-babaijebu-results.visuallottoboard.com/" class="carousel-button" target="_blank">Visit Now</a>
+            </div>
+          </div> -->
+
+          <!-- Slide 4: Classification Chart Download -->
+          <!-- <div class="carousel-slide chart-download-slide">
+            <div class="carousel-overlay"></div>
+            <img class="img" src="https://res.cloudinary.com/ddatfadov/image/upload/v1767786964/Feature-Graphic_LCC_rgwbmf.png" alt="Classification Chart Mobile" height= />
+            <div class="slide-content">
+              <h2>Download Classification Chart (Mobile)</h2>
+              <p>Your quick guide to lotto number mapping & functions.</p>
+              <a href="https://play.google.com/store/apps/details?id=com.visuallottoboard.lottoclassificationchart" class="carousel-btn" target="_blank">Download Now</a>
+            </div>
+          </div> -->
+
+          <!-- Slide 5: GreenLotto Results Website -->
+          <!-- <div class="carousel-slide green-results-slide"> 
+            <div class="carousel-overlay"></div>  -->
+            <!-- <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1767555240/greenlotto_mobile-view_opcka7.webp" alt="Green Lotto Results Website" class="carousel-image" width="300" />  -->
+            <!-- <div class="slide-content"> 
+              <h2>Green Lotto Results (2026 onward)</h2> 
+              <p>View real-time draws and complete game results instantly.</p> 
+              <a href="https://green-lotto-result.visuallottoboard.com" class="carousel-btn" target="_blank">Visit Results</a> 
+            </div> 
+          </div> -->
+
 
         </div>
 
@@ -252,6 +348,7 @@
               <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1749685606/502967742_17868292308383642_3072545557602929514_n_qt5nwt.jpg" alt="" width="300">
               <h3>prediction</h3>
               <p>Use our intelligent prediction tool to forecast likely winning numbers based on draw history and patterns. Maximize your chances.</p>
+              <!-- <a href="">Try it now</a> -->
                <small>Available Pro/Pro-max subscriber only</small>
             </div>
 
@@ -290,6 +387,11 @@
             </div>
           </div>
         </section>
+
+        <!-- Green Lotto-->
+        <!-- <section class="section-green-lotto" id="greenlotto">
+          <div class="green-lotto-all-content-box">
+        </section> -->
 
         <section class="agency-grid-section">
             <div class="content-header">
@@ -414,6 +516,17 @@
           </div>
         </section>
 
+        <!-- <section>
+            <h1>How to Play</h1>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </section> -->
+
+
         <!-- Games reuslts-->
         <section class="section-games-result">
           <div class="games-result-content-box">
@@ -466,32 +579,49 @@
           </div>  
         </section>
 
-        <!-- Megapot: single clean desktop/mobile toggle, matching the pattern used on other pages -->
+        <!-- Megapot-->
         <section class="section_megapot">
-            <div class="megapot-heading">
-                <h3>Megapot &mdash; The Internet Lottery</h3>
-                <p>Win up to &#8358;300,000,000, paid out instantly.</p>
+            <div class="megapot-inline-wrapper">
+                <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1785368379/2184_x_270_bvayuh.png" alt="Megapot" class="megapot-inline-img" />
+                <div class="megapot-inline-content">
+                    <h4>Megapot — Win ₦300,000,000</h4>
+                    <p>Play the Internet Lottery. Pick 1–30. Paid out instantly.</p>
+                </div>
+                <a href="https://megapot.io/?utm_source=visuallotto&ref=NFHHTA" target="_blank" rel="noopener sponsored" class="megapot-btn">Play Now</a>
+                <a href="https://megapot.io/?utm_source=visuallotto&ref=NFHHTA" target="_blank" rel="noopener sponsored" aria-label="Megapot - Play the Internet Lottery" id="megapot-link-desktop-promo" data-banner-position="desktop_promo_column">Play Now</a>
             </div>
 
-            <!-- Desktop: promo column style, image + rotating ticker -->
-            <aside class="desktop-promo-column">
-                <a href="https://megapot.io/?utm_source=visuallotto&ref=NFHHTA" target="_blank" rel="noopener sponsored" aria-label="Megapot - Play the Internet Lottery" id="megapot-link-desktop-promo" data-banner-position="landing_page_desktop">
-                    <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1785368379/2184_x_270_bvayuh.png" alt="Megapot - Play to Win" class="megapot-landing-desktop-img">
+
+                <aside class="desktop-promo-column">
+                <a href="https://megapot.io/?utm_source=visuallotto&ref=NFHHTA" target="_blank" rel="noopener sponsored" aria-label="Megapot - Play the Internet Lottery" id="megapot-link-desktop-promo" data-banner-position="desktop_promo_column">
+                    <img src="/assets/megapot/900_x_750.png" alt="Megapot - Play to Win" class="promo-image">
                 </a>
                 <div class="promo-ticker">
-                    <span>Play to win ₦300,000,000</span>
-                    <span>New draw every week</span>
-                    <span>Paid out instantly</span>
+                    <span>🎰 Play to win ₦300,000,000</span>
+                    <span>🍀 New draw every week</span>
+                    <span>💸 Paid out instantly</span>
                 </div>
             </aside>
 
-            <!-- Mobile: single in-article image banner -->
-            <div class="megapot-landing-mobile">
-                <a href="https://megapot.io/?utm_source=visuallotto&ref=NFHHTA" target="_blank" rel="noopener sponsored" aria-label="Megapot - Play the Internet Lottery" id="megapot-link-inarticle-landing" data-banner-position="landing_page_mobile">
-                    <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1785368379/900_x_750_ppmdse.png" alt="Megapot - Play to Win" class="megapot-landing-mobile-img">
-                </a>
-            </div>
+            <div class="mobile-view">
+            <!-- <a class="megapot-teaser-bar" href="https://megapot.io/?utm_source=visuallotto&ref=NFHHTA" target="_blank" rel="noopener sponsored" aria-label="Megapot - Play the Internet Lottery" id="megapot-link-teaser" data-banner-position="header_teaser">
+                <span>Megapot &middot; play the internet lottery</span>
+                <i class="ti ti-arrow-right"></i>
+            </a> -->
         </section>
+
+       
+     
+
+        <!-- <section class="section-fq" style="height: 500px; background-color: white;">
+            <h5>FQ</h5>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </section> -->
 
         <section class="section-newsletter"> 
           <h3>Subscribe to Our Newsletter</h3> 
@@ -509,6 +639,31 @@
           <small class="privacy-notice">We respect your privacy. Unsubscribe at any time.</small>
         </section>
 
+        <!-- <section class="newsletter-section">
+    <div class="newsletter-container">
+        <div class="newsletter-content">
+            <h2>Master the Board & Sharpen Your Strategy</h2>
+            <p>Get the edge with visual insights delivered straight to your inbox. Stay updated on patterns, app features, and results.</p>
+            
+            <ul class="newsletter-features">
+                <li><strong>Lotto Insights:</strong> Weekly visual pattern analysis.</li>
+                <li><strong>App Pro Updates:</strong> New feature guides for the Forecast App.</li>
+                <li><strong>Instant Results:</strong> Quick summaries of the latest draws.</li>
+                <li><strong>Strategic Guides:</strong> Tutorials on maximizing your visual board.</li>
+            </ul>
+        </div>
+
+        <div class="newsletter-form-container">
+            <form id="newsletter-form" action="/your-endpoint" method="POST">
+                <div class="input-group">
+                    <input type="email" name="email" placeholder="Enter your email" required aria-label="Email Address">
+                    <button type="submit" class="btn-subscribe">Get Insights</button>
+                </div>
+                <p class="form-footer">No spam. Only data-driven updates. Unsubscribe anytime.</p>
+            </form>
+        </div>
+    </div>
+</section> -->
       </main>
 
       <footer>
@@ -519,6 +674,7 @@
               <small>Visual Lotto Board is a trusted agent for Premier Lotto (Baba Ijebu), offering a smart, secure, and convenient way to play your favorite games, get real-time results, and access intelligent predictions.</small>
             </div>
 
+            <!-- wrapper for all content inside fot-up-wraper-->
             <div class="right-content-wrap">
               <section class="footer-quick-links-wrap">
                 <h6>Navigation Links</h6>
@@ -527,10 +683,12 @@
                   <a href="/contact">Contact</a>
                   <a href="/about">About</a>
                   <a href="#">How to Play</a>
+                  <!-- <a href="https://premier-lotto-babaijebu-results.visuallottoboard.com/" target="_blank">Results</a> -->
                   <a href="/about#fqa">FQA</a>
                 </div>
               </section>
 
+             <!-- footer links to features-->
                <section class="footer-feature-wrap">
                   <h6>Quick Links</h6>
                   <div>
@@ -539,6 +697,7 @@
                     <a href="https://green-lotto-result.visuallottoboard.com/" target="_blank">GreenLotto Results</a>
                     <a href="https://app.visuallottoboard.com/subscription">Subscription</a>
                     <a href="https://blog.visuallottoboard.com" target="_blank">Blog</a>
+                    <!-- <a href="#greenlotto">Green Lotto Terminal</a> -->
                   </div>
               </section>
 
@@ -553,6 +712,7 @@
                 </div>
               </section>
 
+                <!-- footer links to social media-->
               <section class="footer-medias-wrap">
                 <h6>follow us</h6>
                 <div>
@@ -597,7 +757,9 @@
       <script src="/carousel/caro-script.js"></script>
       <script src="/script/sub.js"></script>
       
+      <!-- Load Supabase SDK first -->
       <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
       <script src="/script/newsletter.js"></script>
     </body>
 </html>
+        

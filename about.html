@@ -15,108 +15,211 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <style>
+    <style>
+        .about-hero {
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 10px;
+        }
 
-    .about-hero {
-  padding: 4rem 2rem;
-  text-align: center;
-  border-radius: 10px;
-}
+        .about-hero h1 {
+            font-size: 2.5rem;
+            color: #2282c7;
+            margin-bottom: 1rem;
+        }
 
-.about-hero h1 {
-  font-size: 2.5rem;
-  color: #2282c7;
-  margin-bottom: 1rem;
-}
+        .about-hero p {
+            font-size:20px;
+            opacity:.95;
+        }
 
-.about-hero p {
-  font-size: 1.1rem;
-  color: #444;
-  max-width: 600px;
-  margin: 0 auto;
-}
+        /* .about-hero p {
+            font-size: 1.1rem;
+            color: #444;
+            max-width: 600px;
+            margin: 0 auto;
+        } */
 
-.about-section {
-  max-width: 800px;
-  margin: 3rem auto;
-  padding: 1rem 2rem;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px #2282c7;
-}
+        .about-section {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 1rem 2rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px #2282c7;
+        }
 
-.about-section h2 {
-  /* color: #10b981; */
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-}
+        .about-section ul {
+            padding-left: 1.5rem;
+            color: #333;
+            list-style: none;
+        }
 
-.about-section p {
-  color: #333;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
+        .about-section ul li {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
 
-.about-section ul {
-  padding-left: 1.5rem;
-  color: #333;
-  list-style: none;
-}
+        .about-section ul li::before {
+            content: "✔️";
+            position: absolute;
+            left: 0;
+        }
 
-.about-section ul li {
-  margin-bottom: 0.75rem;
-  position: relative;
-  padding-left: 1.5rem;
-}
-
-.about-section ul li::before {
-  content: "✔️";
-  position: absolute;
-  left: 0;
-}
-
-@media (max-width: 768px) {
-  .about-hero {
-    padding: 2rem 1rem;
-  }
-
-  .about-hero h1 {
-    font-size: 2rem;
-  }
-
-  .about-hero p {
-    font-size: 1rem;
-  }
-
-  .about-section {
-    padding: 1.5rem 1rem;
-    margin: 2rem 1rem;
-  }
-
-  .about-section h2 {
-    font-size: 1.5rem;
-  }
-
-  .about-section p {
-    font-size: 1rem;
-  }
-
-   .about-section ul  {
-   display: list-item;
-   width: 100%;
-
-  }
-  .about-section ul li {
-    margin: 20px auto;
-  }
-
-  .about-section ul li::before {
-    left: 0;
-  }
-}
+        .about-container {
+            width:min(1100px,90%);
+            margin:70px auto;
+        }
 
 
-  </style>
+        .about-section h2{
+
+            color:var(--primary-color);
+
+            margin-bottom:20px;
+
+            position:relative;
+
+            font-size:30px;
+
+        }
+
+        .about-section h2::after{
+
+            content:"";
+
+            display:block;
+
+            width:70px;
+
+            height:4px;
+
+            background:var(--secondary-color);
+
+            margin-top:10px;
+
+            border-radius:20px;
+
+        }
+
+        .about-section p{
+
+            color:#444;
+
+            line-height:1.9;
+
+            font-size:17px;
+
+            margin-bottom:18px;
+
+        }
+
+        .service-grid{
+
+            display:grid;
+
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+            gap:25px;
+
+            margin-top:30px;
+
+        }
+
+        .service-card {
+
+            background:#fff;
+
+            border-radius:14px;
+
+            padding:30px;
+
+            box-shadow:0 5px 18px rgba(0,0,0,.08);
+
+            transition:.3s;
+
+            text-align:center;
+
+        }
+
+        .service-card:hover{
+
+            transform:translateY(-8px);
+
+        }
+
+        .service-card h3{
+
+            color:var(--primary-color);
+
+            margin:18px 0;
+
+        }
+
+        .service-card p{
+
+            font-size:15px;
+
+            line-height:1.7;
+
+        }
+
+        .belief-list{
+
+            margin-left:25px;
+
+        }
+
+        .belief-list li{
+
+            margin-bottom:15px;
+
+            line-height:1.8;
+
+            color:#444;
+
+        }
+
+        @media (max-width: 768px) {
+            .about-hero {
+                padding: 2rem 1rem;
+            }
+
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-hero p {
+                font-size: 1rem;
+            }
+
+            .about-section {
+                padding: 1.5rem 1rem;
+                margin: 2rem 1rem;
+            }
+
+            .about-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .about-section p {
+                font-size: 1rem;
+            }
+
+            .about-section ul  {
+                display: list-item;
+                width: 100%;
+            }
+            .about-section ul li {
+                margin: 20px auto;
+            }
+
+            .about-section ul li::before {
+                left: 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -124,93 +227,193 @@
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
   
-  <header>
-    <nav>
-      <div class="class">
-        <a href="/">
-          <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1749649983/VLB_logo_gpiyzr.png" alt="visual lotto board logo" width="50" height="50">
-        </a>
+    <header>
+        <nav>
+            <div class="class">
+                <a href="/">
+                    <img src="https://res.cloudinary.com/ddatfadov/image/upload/v1749649983/VLB_logo_gpiyzr.png" alt="visual lotto board logo" width="50" height="50">
+                </a>
 
-        <input type="checkbox" class="toggle-menu">
-        <div class="hamburger"></div> 
-        
-        <ul>
-          <li><a class="nav-link" href="/">Home</a></li>
-          <li><a class="nav-link" href="/contact.html">Contact</a></li>
-          <li><a class="nav-link" href="#" aria-current="page">About Us</a></li>
-          <li><a class="nav-link" href="/#features">features</a></li>
-          <li><a class="nav-link" href="https://premier-lotto-babaijebu-results.visuallottoboard.com/" target="_blank">Results</a></li>
-          <li><a class="nav-link" href="https://app.visuallottoboard.com/subscription" target="_blank">Subscription</a></li>
-        </ul>
-      </div>
+                <input type="checkbox" class="toggle-menu">
+                <div class="hamburger"></div> 
+                
+                <ul>
+                    <li><a class="nav-link" href="/">Home</a></li>
+                    <li><a class="nav-link" href="/contact.html">Contact</a></li>
+                    <li><a class="nav-link" href="#" aria-current="page">About Us</a></li>
+                    <li><a class="nav-link" href="/#features">features</a></li>
+                    <li><a class="nav-link" href="https://premier-lotto-babaijebu-results.visuallottoboard.com/" target="_blank">Results</a></li>
+                    <li><a class="nav-link" href="https://app.visuallottoboard.com/subscription" target="_blank">Subscription</a></li>
+                </ul>
+            </div>
 
-      <div class="login-signup-wrapper">
-        <a class="nav-link" href="https://app.visuallottoboard.com/" target="_blank"><i class="fa-solid fa-user"></i> Login / Sign up</a>
-      </div>   
-    </nav>
-  </header>
+            <div class="login-signup-wrapper">
+                <a class="nav-link" href="https://app.visuallottoboard.com/" target="_blank"><i class="fa-solid fa-user"></i> Login / Sign up</a>
+            </div>   
+        </nav>
+    </header>
   
-  <main>
-  <!-- Hero Section -->
-    <section class="about-hero">
-      <h1>About Us</h1>
-      <p>We don’t run the games. We elevate how you experience them.</p>
-    </section>
+    <main>
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <h1>About Visual Lotto Board</h1>
+                <!-- <p>
+                    Your Lotto Companion
+                </p> -->
+            </div>
+        </section>
+
+        <section class="about-container">
 
     <!-- Our Focus -->
     <section class="about-section">
-      <h2>Our Focus</h2>
-      <p>
-        We don’t create the games—we reimagine how they’re experienced. Our platform enriches the forecasting environment for players by delivering meaningful data insights, intuitive visual tools, and a more informed prediction experience.
-      </p>
+        <h2>Our Focus</h2>
+
+        <p>
+            At Visual Lotto Board, we are committed to making lottery information
+            more accessible, insightful, and technology-driven.
+            Through data analytics, visual tools, research, and digital services,
+            we help users better understand lottery trends, historical results,
+            and forecasting information in a simple and engaging way.
+        </p>
     </section>
 
     <!-- Our Role -->
     <section class="about-section">
-      <h2>Our Role in the Lotto Ecosystem</h2>
-      <p>
-        Visual Lotto Board is an independent platform built to enrich the experience of lotto players. We focus on improving the prediction environment by providing accessible data, visual tools, and meaningful insights—helping users make better-informed choices.
-      </p>
-      <p>
-        While we are not a lottery company, we exist to add clarity, structure, and value to the process of forecasting results.
-      </p>
+
+        <h2>Our Role in the Lotto Ecosystem</h2>
+
+        <p>
+            Visual Lotto Board is an independent digital platform dedicated to
+            providing lottery information, results publishing, analytics,
+            and technology-enabled information services.
+        </p>
+
+        <p>
+            We are not a lottery operator and we do not conduct lottery games.
+            Instead, we are terminal operator and we help users access reliable results,
+            statistical insights, historical data,
+            and forecasting tools designed to support informed decision-making.
+        </p>
+
     </section>
 
-    <!-- Our Mission -->
+    <!-- Mission -->
     <section class="about-section">
-      <h2>Our Mission</h2>
-      <p>
-        To make lottery gaming more engaging, data-informed, and easier to interpret—putting better prediction power into the hands of players everywhere.
-      </p>
+
+        <h2>Our Mission</h2>
+
+        <p>
+            To become a trusted digital platform for lottery information,
+            analytics, and technology-enabled services by delivering reliable
+            data, innovative tools, and valuable insights that empower users
+            to make informed decisions.
+        </p>
+
     </section>
 
-    <!-- Our Story -->
+    <!-- Story -->
     <section class="about-section">
-      <h2>Our Story</h2>
-      <p>
-        Founded in Lagos, Visual Lotto Board started with a simple idea: bring lottery results to life through interactive, real-time visuals. We’re reshaping how results are experienced and understood across Nigeria and beyond.
-      </p>
+
+        <h2>Our Story</h2>
+
+        <p>
+            Founded in Lagos, Nigeria, Visual Lotto Board was created to improve
+            how lottery information is accessed and understood.
+            What began as a platform for publishing lottery results has evolved
+            into a growing ecosystem offering analytics,
+            forecasting tools, subscription services,
+            and digital information solutions for users across Nigeria
+            and beyond.
+        </p>
+
     </section>
 
-    <!-- Our Team -->
+    <!-- Business Information -->
     <section class="about-section">
-      <h2>Our Team</h2>
-      <p>
-        We’re a diverse crew of designers, engineers, analysts, and visionaries—driven by a shared goal of making lotto prediction smarter and more accessible for everyone.
-      </p>
+
+        <h2>Business Information</h2>
+
+        <p>
+            Visual Lotto Board is a registered Business Name in Nigeria.
+            We provide lottery information,
+            results publishing,
+            lottery-related data analytics,
+            subscription-based online services,
+            research,
+            streaming,
+            and technology-enabled information services.
+        </p>
+
+        <p>
+            We proudly serve users across Nigeria while expanding our
+            digital services to other international markets.
+        </p>
+
     </section>
 
-    <!-- What We Believe -->
+    <!-- Core Services -->
+
     <section class="about-section">
-      <h2>What We Believe</h2>
-      <ul>
-        <li>Informed forecasting is powerful</li>
-        <li>Data should be clear, visual, and honest</li>
-        <li>Good design makes better decisions possible</li>
-        <li>We evolve by listening to players’ needs</li>
-      </ul>
-    </section>
-  </main>
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Lottery Results</h3>
+                <p>Fast and reliable access to current and historical lottery results.</p>
+            </div>
 
+            <div class="service-card">
+                <h3>Forecast Tools</h3>
+                <p>Data-driven forecasting tools designed to enhance user insights.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Statistics & Analytics</h3>
+                <p>Visual analytics, trends, frequency charts and historical analysis.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Premium Membership</h3>
+                <p>Unlock exclusive forecasts, analytics and premium platform features.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Research</h3>
+                <p>Continuous research into lottery patterns and information services.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Future Services</h3>
+                <p>Lotto Radio, newsletters, AI insights and additional digital products.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Values -->
+
+    <section class="about-section">
+
+        <h2>What We Believe</h2>
+
+        <ul class="belief-list">
+
+            <li>Reliable information builds trust.</li>
+
+            <li>Data should be clear, accurate and accessible.</li>
+
+            <li>Technology should simplify complex information.</li>
+
+            <li>Innovation grows by listening to our users.</li>
+
+            <li>Continuous improvement creates lasting value.</li>
+
+        </ul>
+
+    </section>
+
+</section>
+    </main>
 </body>
 </html>

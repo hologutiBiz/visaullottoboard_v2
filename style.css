@@ -535,11 +535,20 @@ footer {
    gap: 4em;
 }
 .left-content-wrap {
-   width: 50%;
+   width: 35%;
 }
 .left-content-wrap img {
    display: block;
    border-radius: 50%;
+}
+.left-content-wrap h4 {
+   text-align: justify;
+}
+.left-content-wrap .tagline {
+   text-align: justify;
+   margin: 5px auto 10px;
+   font-style: italic ;
+   font-size: 12px;
 }
 .left-content-wrap small {
    display: block;
@@ -551,7 +560,7 @@ footer {
 .right-content-wrap {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
-   width: 50%;
+   width: 65%;
    text-align: justify;
 }
 .right-content-wrap h6 {
@@ -599,36 +608,37 @@ footer .fa-brands {
    margin: auto 10px;
 }
 
-/*...>>>>>> Mobile Device Breakpoint <<<<<<....*/
-@media (min-width: 600px) and (max-width: 999px) {
-   nav {
-      flex-direction: column;
-      margin: auto 2%;
+
+/* Mobile Device Breakpoint <<<<<< */
+@media (max-width: 889px) {
+    nav {
+        flex-direction: column;
+        margin: auto 2%;
+        }
+    
+    .class {
+        position: relative;
+        justify-content: space-between;
+        padding: 10px 15px;
+        background-color: transparent;
+        gap: 1rem;
     }
- 
-   .class {
-      position: relative;
-      justify-content: space-between;
-      padding: 10px 15px;
-      background-color: transparent;
-      gap: 1rem;
-   }
-   .logo {
-      margin-left: 0;
-      border-radius: 50%;
-   }
-   .toggle-menu {
-      display: block;
-      position: fixed;
-      top: -46%;
-      right: 5%;
-      opacity: 0;
-   }
-   .hamburger {
-      display: block;
-      top: 3.5%;
-      right: 0;
-   }
+    .logo {
+        margin-left: 0;
+        border-radius: 50%;
+    }
+    .toggle-menu {
+        display: block;
+        position: fixed;
+        top: -46%;
+        right: 5%;
+        opacity: 0;
+    }
+    .hamburger {
+        display: block;
+        top: 3.5%;
+        right: 0;
+    }
 
     .class ul {
       position: fixed;
@@ -640,13 +650,13 @@ footer .fa-brands {
       justify-content: center;
       padding-top: 30%;
       margin-top: 30%;
-      background-color: var(--primary-color); 
+      background-color: #fff; 
       transition: 0.5s;
       z-index: 1000;   
    }
    .class ul li a {
       display: block;
-      color: #fff;
+      /* color: #fff; */
       margin: 20px auto;
       border-bottom: 1px solid transparent;
       font-size: 1.2rem;
@@ -690,174 +700,9 @@ footer .fa-brands {
 }
 
 
-
    /* ============================= */
 /* Small Devices (phones ≤ 599px) */
 /* ============================= */
-@media (max-width: 719px) {
-   header nav,
-   .class,
-   .login-signup-wrapper {
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%;
-   }
- 
-   .class {
-      position: relative;
-      padding: 10px 15px;
-      background-color: transparent;
-      gap: 1rem;
-   }
-   .logo {
-      margin: 0;
-      border-radius: 50%;
-   }
-   .toggle-menu {
-      display: block;
-      position: fixed;
-      top: -35%;
-      left: 85%;
-      opacity: 0;
-   }
-   .hamburger {
-      display: block;
-      left: 80%;
-   }
-
-   .class ul {
-      position: fixed;
-      right: -200%;
-      flex-direction: column;
-      width: 100%;
-      height: 100%;
-      align-items: center;
-      justify-content: center;
-      padding-top: 30%;
-      background-color: var(--primary-color); 
-      transition: 0.5s;
-      z-index: 1000;   
-   }
-   .class ul li a {
-      display: block;
-      color: #fff;
-      margin: 20px auto;
-      border-bottom: 1px solid transparent;
-
-   }
-   .class ul li a:hover {
-      color: #fff;
-      border-bottom: 1px solid #fff;
-   }
-
-  .login-signup-wrapper {
-      margin: 10px 0 0;
-      width: fit-content;
-   }
-
-  /* --- MAIN --- */
-  .main-heading {
-      padding: 10px 0;
-   }
-   .h1 {
-      font-size: 1.1rem;
-   }
-   .feature-wrap {
-      grid-template-columns: 1fr;
-   }
-
-   .trust-content-wrap {
-      grid-template-columns: 1fr;
-   }
-
-   .sub-plans {
-      flex-direction: column;
-      align-items: center;
-   }
-
-   /* Games results */
-    .section-games-result {
-      background-size: 30%;
-   }
-    .games-result-content-box {
-      width: 100%;
-      background-color: #ffffffec;
-   }  
-   .board-result {
-      flex-direction: column;
-      align-items: stretch;
-      margin: 0;
-   }
-   table {
-      width: 300px;
-      margin: 4%;
-   }
-   caption {
-      text-transform: uppercase;
-      font-size: 10px;
-   }
-   th {
-      font-size: 10px;
-   }
-   .winning,
-   .machine {
-      font-size: 8px;
-   }
-
-   .apply-now-btn,
-   .get-started {
-      width: 90%;
-      font-size: 18px;
-   }
-
-   /*.....Newsletter......*/
-   
-    .section-newsletter h3 {
-        font-size: 1.8rem;
-    }
-
-    .newsletter-form {
-        flex-direction: column;
-    }
-
-   .newsletter-form input {
-      width: 300px;
-      margin-bottom: 20px;
-     }
-    .newsletter-form button {
-        width: 100%;
-        margin: 20px auto;
-    }
-
-
-
-   /* --- FOOTER --- */
-   .fot-up-wraper {
-      flex-direction: column;
-      gap: 2rem;
-  }
-
-   .right-content-wrap {
-    grid-template-columns: 1fr;
-    width: 100%;
-   }
-   .footer-feature-wrap {
-      justify-self: center;
-   }
-   .footer-medias-wrap {
-      justify-self: right;
-   }
-
-   .left-content-wrap {
-      width: 100%;
-   }
-
-   .fot-down-wrapper {
-      flex-direction: column;
-      text-align: center;
-      gap: 10px;
-   }
-}
 
 
 

@@ -700,8 +700,19 @@ footer .fa-brands {
       flex-direction: column;
    }
 
+   .left-content-wrap,
    .right-content-wrap {
       width: 100%;
+   }
+
+   .right-content-wrap {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+   }
+
+   .fot-down-wrapper {
+      flex-direction: column;
    }
 }
 

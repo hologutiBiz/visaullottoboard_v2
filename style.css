@@ -151,7 +151,7 @@ ul {
 
 
 /*....section: features ...*/
-.section-features {
+.section_features {
    position: relative;
    padding-bottom: 20px;
    margin: 3rem 5% 0;
@@ -172,7 +172,7 @@ ul {
 .section-features h2 {
    color: #fff;
 }
-.feature-wrap {
+.feature-wrapper {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-template-rows: repeat(2, 1fr);
@@ -247,7 +247,7 @@ ul {
 
 
 /*....section: Why choose us ...*/
-.section-why-chose {
+.section_why-chose-us {
    color: #fff;
    display: flex;
    flex-direction: column;
@@ -255,10 +255,10 @@ ul {
    align-items: center;
    background-color: var(--primary-color);
 }
-.all-contents-box {
+.why-chose-us-contents-box {
    margin: 5%;
 }
-.trust-content-wrap {
+.trust-content-wrapper {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
    margin: 3em;
@@ -279,11 +279,11 @@ testimonial
 ..............................*/
 
 /*....section: sub ...*/
-.section-sub {
+.section_sub {
    position: relative;
    overflow: hidden;
 }
-.section-sub .light-blue-overlay {
+.section_sub .light-blue-overlay {
    position: absolute;
    top: 0;
    left: 0;
@@ -292,7 +292,7 @@ testimonial
    width: 100%;
    z-index: -1;
 }
-.sub-heading-wrap {
+.sub-heading-wrapper {
    margin: 3rem auto;
 }
 .sub-plans {
@@ -673,8 +673,14 @@ footer .fa-brands {
       top: 2%;
       right: 10%;
    }
-   .feature-wrap {
+   .feature-wrapper {
       grid-template-columns: repeat(2, 1fr);
+   }
+
+   .sub-plans {
+      display: grid;
+      grid-template-columns: 1fr;
+      place-items: center;
    }
 
    .board-result {
@@ -699,10 +705,19 @@ footer .fa-brands {
    }
 }
 
+@media screen and (max-width: 699px) {
+   .feature-wrapper {
+      grid-template-columns: 1fr;
+   }
 
-   /* ============================= */
-/* Small Devices (phones ≤ 599px) */
-/* ============================= */
+   .section_why-chose-us .trust-content-wrapper {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+   }
+}
+
+
+
 
 
 

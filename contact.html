@@ -234,14 +234,19 @@
         <div>
           <span class="query-type">Query Type</span>
           <div class="field query-field">
-            <label for="general-enquiry">
-              <input class="radio" type="radio" name="guery" id="general_enquiry" placeholder="General Enquiry">
+            <label for="general_enquiry">
+              <input class="radio" type="radio" name="guery" id="general_enquiry" value="General Enquiry" checked>
               <small>General Enquiry</small>
             </label>
 
             <label for="support_request">
-              <input type="radio" name="guery" id="support_request">
+              <input type="radio" name="guery" id="support_request" value="Support Request">
               <small>Support Request</small>
+            </label>
+
+            <label for="advertising_inquiry">
+              <input type="radio" name="guery" id="advertising_inquiry" value="Advertising Inquiry">
+              <small>Advertising Inquiry</small>
             </label>
           </div>
         </div>
@@ -282,6 +287,23 @@
     ( function() {
       emailjs.init("BQysLPe_NPpvTICOe");
     })(); 
+
+    // Pre-select query type and pre-fill message based on a ?type= URL param
+    // e.g. /contact.html?type=advertising is used by the "Book Ad Space" CTA
+    (function prefillFromQueryParam() {
+      const params = new URLSearchParams(window.location.search);
+      const type = params.get("type");
+
+      if (type === "advertising") {
+        const radio = document.getElementById("advertising_inquiry");
+        if (radio) radio.checked = true;
+
+        const textarea = document.querySelector('#contact-form textarea[name="message"]');
+        if (textarea && !textarea.value) {
+          textarea.value = "I'm interested in advertising on Visual Lotto Board. Please send more details on available formats, placements, and rates.";
+        }
+      }
+    })();
 
     function showToast(message, success = true) {
       const toast = document.getElementById("toast");
